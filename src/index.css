@@ -28,8 +28,29 @@
 }
 
 .navbar a {
-  margin-left: 16px;
+  margin-left: 0;
+  padding-right: 40px;
+  font-weight: 600;
   text-decoration: none;
-  padding: 6px;
   color: black;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* main content */
+.content {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.quiz h2 {
+  margin: 20px auto;
+}
+
+.quiz a {
+  text-decoration: none;
+  color: orangered;
 }
