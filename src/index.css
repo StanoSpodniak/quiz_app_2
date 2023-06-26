@@ -54,3 +54,7 @@
   text-decoration: none;
   color: orangered;
 }
+
+.quiz a:hover {
+  text-decoration: underline;
+}
