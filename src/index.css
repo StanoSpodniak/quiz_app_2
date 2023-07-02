@@ -55,7 +55,7 @@
   text-align: center;
 }
 
-.options {
+.choices {
   margin: 40px auto;
   width: 640px;
   display: grid;
@@ -64,7 +64,7 @@
   justify-items: center;
 }
 
-.options button {
+.choices button {
   height: 75px;
   width: 300px;
   font-size: 1.5em;
@@ -73,6 +73,6 @@
   background-color: white;
 }
 
-.options button:hover {
+.choices button:hover {
   background-color: AliceBlue;
 }
