@@ -4,20 +4,19 @@ import { useState, useEffect } from 'react';
 const Home = () => {
     const url = "https://the-trivia-api.com/v2/questions/?difficulties=easy&limit=1&categories=geography";
     const [data, setData] = useState(null);
+    const [options, setOptions] = useState([]);
+    const [correctAnswer, setCorrectAnswer] = useState();
+    const [incorrectAnswers, setIncorrectAnswers] = useState([]);
 
     useEffect(() => {   
-        const fetchData = () => {
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    setData(data)
-                })
-                .catch(error => {
-                    console.log(error);
-                })
-        };
-        
-        fetchData();
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                setData(data)
+                setCorrectAnswer(data[0].correctAnswer)
+                setIncorrectAnswers(data[0].incorrectAnswers)
+            })
+            .catch(error => console.log(error))
     }, []);
 
     return ( 
@@ -33,25 +32,25 @@ const Home = () => {
                 )}
                 <div className="options">
                     {data ? (
-                        <button>{data[0].correctAnswer}</button>
+                        <button>{correctAnswer}</button>
                     ) : (
                         <button>Loading...</button>
                     )}
 
                     {data ? (
-                        <button>{data[0].incorrectAnswers[0]}</button>
+                        <button>{options[0]}</button>
                     ) : (
                         <button>Loading...</button>
                     )}
 
                     {data ? (
-                        <button>{data[0].incorrectAnswers[1]}</button>
+                        <button>{incorrectAnswers[1]}</button>
                     ) : (
                         <button>Loading...</button>
                     )}
                     
                     {data ? (
-                        <button>{data[0].incorrectAnswers[2]}</button>
+                        <button>{}</button>
                     ) : (
                         <button>Loading...</button>
                     )}
