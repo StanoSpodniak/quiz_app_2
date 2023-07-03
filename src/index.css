@@ -46,17 +46,26 @@
   margin: 40px auto;
 }
 
+.quiz-container {
+  position: relative;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .quiz {
-  margin: 20px auto;
+  margin: 60px auto;
 }
 
 #question-text {
-  font-size: 2em;
+  font-size: 1.7em;
   text-align: center;
 }
 
 .choices {
-  margin: 40px auto;
+  margin: 60px auto;
   width: 640px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -67,7 +76,8 @@
 .choices button {
   height: 75px;
   width: 300px;
-  font-size: 1.5em;
+  padding: 5px;
+  font-size: 1.3em;
   border: 1px solid grey;
   border-radius: 10px;
   background-color: white;
@@ -75,4 +85,19 @@
 
 .choices button:hover {
   background-color: AliceBlue;
+}
+
+.choices button:disabled {
+
+}
+
+.endGame-panel {
+  position: absolute;
+  top: 0px;
+  left: -25px;
+  display: none;
+  width: 1050px;
+  height: 600px;
+  background-color: white;
+  text-align: center;
 }

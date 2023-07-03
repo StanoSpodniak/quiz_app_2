@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 //https://the-trivia-api.com/docs/v2/#tag/Questions/operation/getRandomQuestionshttps://the-trivia-api.com/docs/v2/#tag/Questions/operation/getRandomQuestions
 
-const Home = () => {
-    const url = "https://the-trivia-api.com/v2/questions/?difficulties=medium&limit=10&categories=history";
+const Quiz = () => {
+    const url = "https://the-trivia-api.com/v2/questions/?difficulties=medium&limit=10&categories=geography";
     const [data, setData] = useState(null);
     const [choices, setChoices] = useState([]);
     const [question, setQuestion] = useState('');
@@ -15,7 +15,11 @@ const Home = () => {
         { id: 1, value: "", backgroundColor: "#FFFFFF" },
         { id: 2, value: "", backgroundColor: "#FFFFFF" },
         { id: 3, value: "", backgroundColor: "#FFFFFF" }
-      ]);
+    ]);
+    const buttonEls = useRef([]);
+    const [choicesDisabled, setChoicesDisabled] = useState(false);
+
+    const endGamePanel = useRef(null);
 
     const fetchData = async (url) => {   
         try {
@@ -37,7 +41,7 @@ const Home = () => {
         } else {
             console.log("no data");
         }
-    }, [data])
+    }, [data]);
 
     const prepareQuestion = () => {
         const incorrectAnswers = data[questionCount].incorrectAnswers;
@@ -62,35 +66,55 @@ const Home = () => {
         const userAnswer = event.target.innerText;
         const correctAnswer = data[questionCount - 1].correctAnswer;
 
+        let options = buttonEls.current;
+        const filteredOptions = options.filter(element => element !== null);
+        options = [];
+
+        //choices button:hover and disabled does not work
+        setChoicesDisabled(true);
+
         if (userAnswer === correctAnswer) {
             setScore(score + 1);
             event.target.style.backgroundColor = "#7FFFD4";
         } else {
             event.target.style.backgroundColor = "#F08080";
 
-            buttons.map((button) => {
+            filteredOptions.map((button) => {
                 if(button.value === correctAnswer) {
-                    //Finish maybe using "useRef"
-                    button.backgroundColor = "#7FFFD4";
+                    button.style.backgroundColor = "#7FFFD4";
                 }
             })
         }
 
         setTimeout(() => {
-            //Update all buttons with white background color here
             if (questionCount < data.length) {
                 prepareQuestion(data);
-                event.target.style.backgroundColor = "#FFFFFF";
+                resetButtonsColor(filteredOptions);
+                setChoicesDisabled(false);
             } else {
-                event.target.style.backgroundColor = "#FFFFFF";
+                resetButtonsColor(filteredOptions);
+
+                let endPanel = endGamePanel.current;
+                endPanel.style.display = "block";
             }
         }, 2000);
     }
 
+    function resetButtonsColor(buttons) {
+        buttons.map((button) => {
+            button.style.backgroundColor = "#FFFFFF";
+        })
+    }
+
+    function handleNewGame() {
+        window.location.reload();
+    } 
+
     return ( 
-        <div className="home">
-            <h2>Question:</h2>
-            <div>
+        <div className="quiz-container">
+            <div className="quiz-header">
+                {data && <h2>Question {questionCount}/{data.length}:</h2>}
+                {data && <h2>Score: {score}/{data.length}</h2>}
             </div>
             <div className="quiz">
                 {data ? (
@@ -98,26 +122,31 @@ const Home = () => {
                 ) : (
                     <p>Loading...</p>
                 )}
-                {data && <p>Question: {questionCount}/{data.length}</p>}
-                {data && <p>Score: {score}/{data.length}</p>}
                 <div className="choices">
                     {data ? (
                         buttons.map((button) => (
                             <button
                                 key={button.id}
+                                ref={(element) => buttonEls.current.push(element)}
+                                value={choices[button.id]}
                                 onClick={handleAnswer}
-                                style={{ backgroundColor: button.backgroundColor }}                          
+                                disabled={choicesDisabled}                                           
                             >
                                 {choices[button.id]}
                             </button>
                         ))
                     ) : (
-                        <button>Loading...</button>
+                        <p>Loading...</p>
                     )}
                 </div>
+            </div>
+            <div className="endGame-panel" ref={endGamePanel}>
+                <h2>Congratulations! You have finished quiz.</h2>
+                {data && <h3>Your final score is {score}/{data.length}</h3>}
+                <button onClick={handleNewGame}>Play Again</button>
             </div>
         </div>
      );
 }
  
-export default Home;
+export default Quiz;
