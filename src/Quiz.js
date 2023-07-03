@@ -2,11 +2,20 @@ import { useState, useEffect } from 'react';
 //https://the-trivia-api.com/docs/v2/#tag/Questions/operation/getRandomQuestionshttps://the-trivia-api.com/docs/v2/#tag/Questions/operation/getRandomQuestions
 
 const Home = () => {
-    const url = "https://the-trivia-api.com/v2/questions/?difficulties=easy&limit=5&categories=geography";
+    const url = "https://the-trivia-api.com/v2/questions/?difficulties=medium&limit=10&categories=history";
     const [data, setData] = useState(null);
     const [choices, setChoices] = useState([]);
     const [question, setQuestion] = useState('');
+
     const [questionCount, setQuestionCount] = useState(0);
+    const [score, setScore] = useState(0);
+
+    const [buttons, setButtons] = useState([
+        { id: 0, value: "", backgroundColor: "#FFFFFF" },
+        { id: 1, value: "", backgroundColor: "#FFFFFF" },
+        { id: 2, value: "", backgroundColor: "#FFFFFF" },
+        { id: 3, value: "", backgroundColor: "#FFFFFF" }
+      ]);
 
     const fetchData = async (url) => {   
         try {
@@ -24,7 +33,6 @@ const Home = () => {
 
     useEffect(() => {
         if (data) {
-            console.log(data);
             prepareQuestion();
         } else {
             console.log("no data");
@@ -44,19 +52,33 @@ const Home = () => {
         setChoices(options);
         setQuestion(data[questionCount].question.text);
         setQuestionCount(questionCount + 1);
+
+        for(let i = 0; i < buttons.length; i++) {
+            buttons[i].value = options[i];
+        }
     }
 
     function handleAnswer(event) {
         const userAnswer = event.target.innerText;
+        const correctAnswer = data[questionCount - 1].correctAnswer;
 
-        if (userAnswer === data[questionCount - 1].correctAnswer) {
+        if (userAnswer === correctAnswer) {
+            setScore(score + 1);
             event.target.style.backgroundColor = "#7FFFD4";
         } else {
             event.target.style.backgroundColor = "#F08080";
+
+            buttons.map((button) => {
+                if(button.value === correctAnswer) {
+                    //Finish maybe using "useRef"
+                    button.backgroundColor = "#7FFFD4";
+                }
+            })
         }
 
         setTimeout(() => {
-            if (questionCount < 5) {
+            //Update all buttons with white background color here
+            if (questionCount < data.length) {
                 prepareQuestion(data);
                 event.target.style.backgroundColor = "#FFFFFF";
             } else {
@@ -76,28 +98,19 @@ const Home = () => {
                 ) : (
                     <p>Loading...</p>
                 )}
-                <p>{questionCount}/5</p>
+                {data && <p>Question: {questionCount}/{data.length}</p>}
+                {data && <p>Score: {score}/{data.length}</p>}
                 <div className="choices">
                     {data ? (
-                        <button onClick={handleAnswer}>{choices[0]}</button>
-                    ) : (
-                        <button>Loading...</button>
-                    )}
-
-                    {data ? (
-                        <button onClick={handleAnswer}>{choices[1]}</button>
-                    ) : (
-                        <button>Loading...</button>
-                    )}
-
-                    {data ? (
-                        <button onClick={handleAnswer}>{choices[2]}</button>
-                    ) : (
-                        <button>Loading...</button>
-                    )}
-                    
-                    {data ? (
-                        <button onClick={handleAnswer}>{choices[3]}</button>
+                        buttons.map((button) => (
+                            <button
+                                key={button.id}
+                                onClick={handleAnswer}
+                                style={{ backgroundColor: button.backgroundColor }}                          
+                            >
+                                {choices[button.id]}
+                            </button>
+                        ))
                     ) : (
                         <button>Loading...</button>
                     )}

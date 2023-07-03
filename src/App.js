@@ -1,5 +1,5 @@
 import NavBar from './NavBar';
-import Home from './Home';
+import Quiz from './Quiz';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
       <div className="App">
         <NavBar />
         <div className='content'>
-          <Home />
+          <Quiz />
         </div>
       </div>
     </Router>
