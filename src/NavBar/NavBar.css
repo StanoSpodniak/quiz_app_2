@@ -1,0 +1,30 @@
+/* Nav bar */
+.navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-bottom: 1px solid silver;
+  }
+  
+  .navbar h1 {
+    font-size: 2em;
+    color: orangered;
+  }
+  
+  .navbar .links {
+    margin-left: auto;
+  }
+  
+  .navbar a {
+    margin-left: 0;
+    padding-right: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }

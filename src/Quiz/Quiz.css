@@ -1,0 +1,91 @@
+/* quiz */
+.quiz-container {
+    position: relative;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+  }
+  
+  .quiz-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h2 {
+    font-weight: 400;
+  }
+  
+  .quiz {
+    margin: 60px auto;
+  }
+  
+  #question-text {
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  .choices {
+    display: grid;
+    margin: 60px auto;
+    width: 640px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    justify-items: center;
+  }
+  
+  .choices button {
+    height: 90px;
+    width: 325px;
+    padding: 5px;
+    font-size: 1.3em;
+    border: 1px solid gray;
+    border-radius: 10px;
+    color: black;
+  }
+  
+ .choices button:disabled {
+    color: black;
+  }
+  
+  .endGame-panel {
+    position: absolute;
+    top: 0px;
+    display: none;
+    width: 100%;
+    height: 600px;
+    background-color: white;
+    text-align: center;
+  }
+
+  .endGame-panel h2, h3 {
+    margin: 40px auto;
+    font-size: 1.5em;
+  }
+
+  .endGame-panel button {
+    height: 75px;
+    width: 275px;
+    border-radius: 10px;
+    background-color: #6BCD6F;
+    color: white;
+    font-size: 2em;
+  }
+
+  @media only screen and (max-width: 800px) {
+    #question-text {
+      font-size: 1.5em;
+    }
+    
+    .choices {
+      margin: 40px auto;
+      grid-template-columns: 1fr;
+      width: 100%;
+      grid-gap: 20px;
+    }
+
+    .choices button {
+      height: 75px;
+      width: 325px;
+      font-size: 1.2em;
+    }
+  }

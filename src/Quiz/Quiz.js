@@ -1,23 +1,26 @@
 import { useState, useEffect, useRef } from 'react';
+import './Quiz.css';
 //https://the-trivia-api.com/docs/v2/#tag/Questions/operation/getRandomQuestionshttps://the-trivia-api.com/docs/v2/#tag/Questions/operation/getRandomQuestions
 
 const Quiz = () => {
     const url = "https://the-trivia-api.com/v2/questions/?difficulties=medium&limit=10&categories=geography";
+    const buttons = [
+            { id: 0 },
+            { id: 1 },
+            { id: 2 },
+            { id: 3 }
+    ];
+    const color = {neutral: "white", correct: "#6BCD6F", incorrect: "#CD6F6B", hover: "#F5F5F5"};
+
     const [data, setData] = useState(null);
-    const [choices, setChoices] = useState([]);
     const [question, setQuestion] = useState('');
+    const [choices, setChoices] = useState([]);
+
+    const buttonEls = useRef([]);
+    const [buttonsDisabled, setButtonsDisabled] = useState(false);
 
     const [questionCount, setQuestionCount] = useState(0);
     const [score, setScore] = useState(0);
-
-    const [buttons, setButtons] = useState([
-        { id: 0, value: "", backgroundColor: "#FFFFFF" },
-        { id: 1, value: "", backgroundColor: "#FFFFFF" },
-        { id: 2, value: "", backgroundColor: "#FFFFFF" },
-        { id: 3, value: "", backgroundColor: "#FFFFFF" }
-    ]);
-    const buttonEls = useRef([]);
-    const [choicesDisabled, setChoicesDisabled] = useState(false);
 
     const endGamePanel = useRef(null);
 
@@ -70,30 +73,34 @@ const Quiz = () => {
         const filteredOptions = options.filter(element => element !== null);
         options = [];
 
-        //choices button:hover and disabled does not work
-        setChoicesDisabled(true);
+        setButtonsDisabled(true);
 
         if (userAnswer === correctAnswer) {
             setScore(score + 1);
-            event.target.style.backgroundColor = "#7FFFD4";
+            event.target.style.backgroundColor = color.correct;
+            event.target.style.color = color.neutral;
+            event.target.style.border = "none";
         } else {
-            event.target.style.backgroundColor = "#F08080";
+            event.target.style.backgroundColor = color.incorrect;
+            event.target.style.color = color.neutral;
+            event.target.style.border = "none";
 
             filteredOptions.map((button) => {
-                if(button.value === correctAnswer) {
-                    button.style.backgroundColor = "#7FFFD4";
+                if(button.value === correctAnswer) {  
+                    button.style.backgroundColor = color.correct;
+                    button.style.color = color.neutral;
+                    button.style.border = "none";
                 }
             })
         }
 
         setTimeout(() => {
+            resetButtonsColor(filteredOptions);
+            
             if (questionCount < data.length) {
+                setButtonsDisabled(false);
                 prepareQuestion(data);
-                resetButtonsColor(filteredOptions);
-                setChoicesDisabled(false);
             } else {
-                resetButtonsColor(filteredOptions);
-
                 let endPanel = endGamePanel.current;
                 endPanel.style.display = "block";
             }
@@ -102,18 +109,29 @@ const Quiz = () => {
 
     function resetButtonsColor(buttons) {
         buttons.map((button) => {
-            button.style.backgroundColor = "#FFFFFF";
+            button.style.backgroundColor = color.neutral;
+            button.style.color = "black";
+            button.style.border = "1px solid grey";
         })
     }
+    
+    const handleMouseEnter = (event) => {
+        event.target.style.backgroundColor = color.hover;
+    };
+    
+    const handleMouseLeave = (event) => {
+        event.target.style.backgroundColor = color.neutral;
+    };
 
     function handleNewGame() {
         window.location.reload();
-    } 
+    }
+
 
     return ( 
         <div className="quiz-container">
             <div className="quiz-header">
-                {data && <h2>Question {questionCount}/{data.length}:</h2>}
+                {data && <h2>Question {questionCount}/{data.length}</h2>}
                 {data && <h2>Score: {score}/{data.length}</h2>}
             </div>
             <div className="quiz">
@@ -127,10 +145,13 @@ const Quiz = () => {
                         buttons.map((button) => (
                             <button
                                 key={button.id}
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
                                 ref={(element) => buttonEls.current.push(element)}
                                 value={choices[button.id]}
                                 onClick={handleAnswer}
-                                disabled={choicesDisabled}                                           
+                                disabled={buttonsDisabled}
+                                style={{backgroundColor: color.neutral}}                                      
                             >
                                 {choices[button.id]}
                             </button>
@@ -141,9 +162,9 @@ const Quiz = () => {
                 </div>
             </div>
             <div className="endGame-panel" ref={endGamePanel}>
-                <h2>Congratulations! You have finished quiz.</h2>
-                {data && <h3>Your final score is {score}/{data.length}</h3>}
-                <button onClick={handleNewGame}>Play Again</button>
+                <h3>Congratulations! You have finished the quiz.</h3>
+                {data && <h2>Your final score is {score}/{data.length}</h2>}
+                <button onClick={handleNewGame}>PLAY AGAIN</button>
             </div>
         </div>
      );

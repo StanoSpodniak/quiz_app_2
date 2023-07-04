@@ -1,5 +1,5 @@
-import NavBar from './NavBar';
-import Quiz from './Quiz';
+import NavBar from './NavBar/NavBar';
+import Quiz from './Quiz/Quiz';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -7,9 +7,7 @@ function App() {
     <Router>
       <div className="App">
         <NavBar />
-        <div className='content'>
-          <Quiz />
-        </div>
+        <Quiz />
       </div>
     </Router>
   );
