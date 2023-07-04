@@ -62,14 +62,28 @@
     font-size: 1.5em;
   }
 
+  .endGame-buttons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    width: 800px;
+  }
+
   .endGame-panel button {
     height: 75px;
     width: 275px;
     border-radius: 10px;
     background-color: #6BCD6F;
     color: white;
-    font-size: 2em;
+    font-size: 1.8em;
+    padding: 5px;
   }
+
+  #home-button {
+    background-color: #CD6F6B;
+  }
+
+  /* endgame panel button has no hover effect */
 
   @media only screen and (max-width: 800px) {
     #question-text {

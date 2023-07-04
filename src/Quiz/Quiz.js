@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import './Quiz.css';
 //https://the-trivia-api.com/docs/v2/#tag/Questions/operation/getRandomQuestionshttps://the-trivia-api.com/docs/v2/#tag/Questions/operation/getRandomQuestions
+//use icons from https://www.flaticon.com/search?word=history on homepage
 
 const Quiz = () => {
-    const url = "https://the-trivia-api.com/v2/questions/?difficulties=medium&limit=10&categories=geography";
+    const url = "https://the-trivia-api.com/v2/questions/?difficulties=medium&limit=3&categories=geography";
     const buttons = [
             { id: 0 },
             { id: 1 },
@@ -114,9 +115,10 @@ const Quiz = () => {
             button.style.border = "1px solid grey";
         })
     }
-    
+
     const handleMouseEnter = (event) => {
         event.target.style.backgroundColor = color.hover;
+        event.target.style.cursor = "pointer";
     };
     
     const handleMouseLeave = (event) => {
@@ -126,7 +128,6 @@ const Quiz = () => {
     function handleNewGame() {
         window.location.reload();
     }
-
 
     return ( 
         <div className="quiz-container">
@@ -161,10 +162,14 @@ const Quiz = () => {
                     )}
                 </div>
             </div>
+            {/* endGame-panel should be probably moved to separate file */}
             <div className="endGame-panel" ref={endGamePanel}>
                 <h3>Congratulations! You have finished the quiz.</h3>
                 {data && <h2>Your final score is {score}/{data.length}</h2>}
-                <button onClick={handleNewGame}>PLAY AGAIN</button>
+                <div className="endGame-buttons">
+                    <button onClick={handleNewGame} id="play-again-button" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Play Again</button>
+                    <a href="/"><button id="home-button" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Choose Another Quiz</button></a>
+                </div>
             </div>
         </div>
      );

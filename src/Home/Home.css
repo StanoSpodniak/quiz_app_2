@@ -1,0 +1,59 @@
+.header {
+    margin: 0 auto;
+    width: 1040px;
+    background-color: gainsboro;
+}
+
+.quiz-categories {
+    margin: 0 auto;
+    width: 1040px;
+}
+
+.category {
+    display: flex;
+    margin: 40px 0;
+    height: 55px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.category img {
+    height: 40px;
+    padding-left: 35px;
+}
+
+.category h2 {
+    padding-left: 35px;
+}
+
+#geography {
+    color: white;
+    background-color: cornflowerblue;
+}
+
+#history {
+    color: black;
+    background-color: coral;
+}
+
+.quizzes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.quizzes button {
+    width: 200px;
+    height: 75px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 1.2em;
+}
+
+.quizzes button:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+    border:none;
+}
