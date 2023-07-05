@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Quiz.css';
 //https://the-trivia-api.com/docs/v2/#tag/Questions/operation/getRandomQuestionshttps://the-trivia-api.com/docs/v2/#tag/Questions/operation/getRandomQuestions
 //use icons from https://www.flaticon.com/search?word=history on homepage
 
 const Quiz = () => {
-    const url = "https://the-trivia-api.com/v2/questions/?difficulties=medium&limit=3&categories=geography";
+    const url = "https://the-trivia-api.com/v2/questions/?difficulties=easy&limit=3&categories=geography";
     const buttons = [
             { id: 0 },
             { id: 1 },
@@ -23,7 +24,8 @@ const Quiz = () => {
     const [questionCount, setQuestionCount] = useState(0);
     const [score, setScore] = useState(0);
 
-    const endGamePanel = useRef(null);
+    const navigate = useNavigate();
+    const [gameEnded, setGameEnded] = useState(false);
 
     const fetchData = async (url) => {   
         try {
@@ -46,6 +48,12 @@ const Quiz = () => {
             console.log("no data");
         }
     }, [data]);
+
+    useEffect(() => {
+        if(gameEnded) {
+            navigate(`./endGame/${score}/${questionCount}`);
+        }
+    }, [gameEnded]);
 
     const prepareQuestion = () => {
         const incorrectAnswers = data[questionCount].incorrectAnswers;
@@ -102,8 +110,7 @@ const Quiz = () => {
                 setButtonsDisabled(false);
                 prepareQuestion(data);
             } else {
-                let endPanel = endGamePanel.current;
-                endPanel.style.display = "block";
+                setGameEnded(true);
             }
         }, 2000);
     }
@@ -112,7 +119,7 @@ const Quiz = () => {
         buttons.map((button) => {
             button.style.backgroundColor = color.neutral;
             button.style.color = "black";
-            button.style.border = "1px solid grey";
+            button.style.border = "2px solid grey";
         })
     }
 
@@ -124,10 +131,6 @@ const Quiz = () => {
     const handleMouseLeave = (event) => {
         event.target.style.backgroundColor = color.neutral;
     };
-
-    function handleNewGame() {
-        window.location.reload();
-    }
 
     return ( 
         <div className="quiz-container">
@@ -162,17 +165,8 @@ const Quiz = () => {
                     )}
                 </div>
             </div>
-            {/* endGame-panel should be probably moved to separate file */}
-            <div className="endGame-panel" ref={endGamePanel}>
-                <h3>Congratulations! You have finished the quiz.</h3>
-                {data && <h2>Your final score is {score}/{data.length}</h2>}
-                <div className="endGame-buttons">
-                    <button onClick={handleNewGame} id="play-again-button" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Play Again</button>
-                    <a href="/"><button id="home-button" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Choose Another Quiz</button></a>
-                </div>
-            </div>
         </div>
      );
 }
- 
+
 export default Quiz;

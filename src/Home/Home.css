@@ -39,12 +39,12 @@
 .quizzes {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 46px;
     margin-bottom: 100px;
 }
 
 .quizzes button {
-    width: 200px;
+    width: 225px;
     height: 75px;
     border: 2px solid grey;
     border-radius: 10px;
