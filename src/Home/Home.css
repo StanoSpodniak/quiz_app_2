@@ -54,6 +54,5 @@
 
 .quizzes button:hover {
     cursor: pointer;
-    background-color: gainsboro;
-    border:none;
+    background-color: #F5F5F5;
 }

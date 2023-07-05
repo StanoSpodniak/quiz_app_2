@@ -1,67 +1,82 @@
 /* quiz */
 .quiz-container {
-    position: relative;
-    padding: 20px;
-    max-width: 1000px;
-    margin: 40px auto;
-  }
-  
-  .quiz-header {
-    display: flex;
-    justify-content: space-between;
-  }
+  position: relative;
+  max-width: 1040px;
+  margin: 0 auto;
+}
 
-  h2 {
-    font-weight: 400;
-  }
-  
-  .quiz {
-    margin: 60px auto;
-  }
-  
+.quiz-header {
+  margin: 20px 0;
+  border: 2px solid #DCDCDC;
+  border-radius: 10px;
+  background-color: #DCDCDC;
+  color: black;
+}
+
+#category-name {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px 20px 40px;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+.quiz {
+  margin: 40px auto;
+}
+
+#question-text {
+  font-size: 2em;
+  text-align: center;
+}
+
+.choices {
+  display: grid;
+  margin: 40px auto;
+  width: 640px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  justify-items: center;
+}
+
+.choices button {
+  height: 90px;
+  width: 325px;
+  padding: 5px;
+  font-size: 1.3em;
+  border: 2px solid gray;
+  border-radius: 10px;
+  color: black;
+}
+
+.choices button:disabled {
+  color: black;
+}
+
+@media only screen and (max-width: 800px) {
   #question-text {
-    font-size: 2em;
-    text-align: center;
+    font-size: 1.5em;
   }
   
   .choices {
-    display: grid;
-    margin: 60px auto;
-    width: 640px;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
-    justify-items: center;
+    margin: 40px auto;
+    grid-template-columns: 1fr;
+    width: 100%;
+    grid-gap: 20px;
   }
 
   .choices button {
-    height: 90px;
+    height: 75px;
     width: 325px;
-    padding: 5px;
-    font-size: 1.3em;
-    border: 2px solid gray;
-    border-radius: 10px;
-    color: black;
+    font-size: 1.2em;
   }
-  
- .choices button:disabled {
-    color: black;
-  }
-
-  @media only screen and (max-width: 800px) {
-    #question-text {
-      font-size: 1.5em;
-    }
-    
-    .choices {
-      margin: 40px auto;
-      grid-template-columns: 1fr;
-      width: 100%;
-      grid-gap: 20px;
-    }
-
-    .choices button {
-      height: 75px;
-      width: 325px;
-      font-size: 1.2em;
-    }
-  }
+}

@@ -5,7 +5,7 @@ import './Quiz.css';
 //use icons from https://www.flaticon.com/search?word=history on homepage
 
 const Quiz = () => {
-    const url = "https://the-trivia-api.com/v2/questions/?difficulties=easy&limit=3&categories=geography";
+    const url = "https://the-trivia-api.com/v2/questions/?difficulties=hard&limit=10&categories=geography";
     const buttons = [
             { id: 0 },
             { id: 1 },
@@ -135,8 +135,11 @@ const Quiz = () => {
     return ( 
         <div className="quiz-container">
             <div className="quiz-header">
-                {data && <h2>Question {questionCount}/{data.length}</h2>}
-                {data && <h2>Score: {score}/{data.length}</h2>}
+                <h2 id="category-name">Geography Hard</h2>
+                <div className="quiz-info">
+                    {data && <h2>Question: {questionCount}/{data.length}</h2>}
+                    {data && <h2>Score: {score}/{data.length}</h2>}
+                </div>
             </div>
             <div className="quiz">
                 {data ? (
