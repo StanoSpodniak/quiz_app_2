@@ -1,0 +1,45 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "geography",
+            "nameCapitalized": "GEOGRAPHY",
+            "backgroundColor": "cornflowerblue",
+            "color": "white",
+            "quizzes": [
+                {"id": 101, "name": "Geography Easy", "difficulty": "easy"},
+                {"id": 102, "name": "Geography Medium", "difficulty": "medium"},
+                {"id": 103, "name": "Geography Hard", "difficulty": "hard"},
+                {"id": 104, "name": "Flags"},
+                {"id": 105, "name": "Capital Cities Easy", "difficulty": "easy"},
+                {"id": 106, "name": "Capital Cities Medium", "difficulty": "medium"},
+                {"id": 107, "name": "Capital Cities Hard", "difficulty": "hard"},
+                {"id": 108, "name": "USA"}
+            ]
+        },
+        {
+            "id": 2,
+            "name": "history",
+            "nameCapitalized": "HISTORY",
+            "backgroundColor": "coral",
+            "color": "black",
+            "quizzes": [
+                {"id": 201, "name": "History Easy", "difficulty": "easy"},
+                {"id": 202, "name": "History Medium", "difficulty": "medium"},
+                {"id": 203, "name": "History Hard", "difficulty": "hard"}
+            ]
+        },
+        {
+            "id": 3,
+            "name": "science",
+            "nameCapitalized": "SCIENCE",
+            "backgroundColor": "#90EE90",
+            "color": "black",
+            "quizzes": [
+                {"id": 301, "name": "Science Easy", "difficulty": "easy"},
+                {"id": 302, "name": "Science Medium", "difficulty": "medium"},
+                {"id": 303, "name": "Science Hard", "difficulty": "hard"}
+            ]
+        }
+    ]
+}

@@ -1,34 +1,32 @@
 import "./Home.css";
+import categories from "../data/categories";
 
 const Home = () => {
+    const quizCategories = {categories};
+    
     return (
         <div className="main-container">
             <div className="header">
                 <h2>Online free quizzes</h2>
             </div>
-            {/* also search bar will be here */}
+            {/* search bar will be here */}
             <div className="quiz-categories">
-                <div className="category" id="geography">
-                    <img src="icons/geography.png" alt="geography icon" />
-                    <h2>GEOGRAPHY</h2>
-                </div>
-                <div className="quizzes">
-                    <a href="/quiz"><button>Geography Easy</button></a>
-                    <button>Geography Medium</button>
-                    <button>Geography Hard</button>
-                </div>
-                <div className="category" id="history">
-                    <img src="icons/history.png" alt="history icon" />
-                    <h2>HISTORY</h2>
-                </div>
-                <div className="quizzes">
-                    <button>History Easy</button>
-                    <button>History Medium</button>
-                    <button>History Hard</button>
-                    <button>History Hard</button>
-                </div>
+                {quizCategories.categories.categories.map((category) => (
+                    <div key={category.id}>
+                        <div className="category" key={category.id} style={{backgroundColor: `${category.backgroundColor}`}}>
+                            <img src={`icons/${category.name}.png`} alt={`${category.name} icon`} />
+                            <h2 style={{color: `${category.color}`}} >{category.nameCapitalized}</h2>
+                        </div>
+                        <div className="quizzes">
+                            {category.quizzes.map((quiz) => (
+                                <a key={quiz.id} href={`/quiz/${category.name}/${quiz.difficulty}`}><button>{quiz.name}</button></a>
+                            ))}
+                        </div>
+                    </div>
+                ))}
                 {/* attribution: <a href="https://www.flaticon.com/free-icons/geography" title="geography icons">Geography icons created by Freepik - Flaticon</a> 
-                <a href="https://www.flaticon.com/free-icons/history" title="history icons">History icons created by Freepik - Flaticon</a>*/}
+                <a href="https://www.flaticon.com/free-icons/history" title="history icons">History icons created by Freepik - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/biology" title="biology icons">Biology icons created by Eucalyp - Flaticon</a>*/}
             </div>
         </div>
     )
