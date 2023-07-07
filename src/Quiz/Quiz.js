@@ -8,7 +8,7 @@ import './Quiz.css';
 
 //make imageQuiz file and functionality
 
-const Quiz = () => { 
+const Quiz = () => {
     const quizParams = useParams();
     const {data, error, isPending} = useFetchQuizData(quizParams);
     

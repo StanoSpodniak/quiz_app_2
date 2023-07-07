@@ -8,6 +8,7 @@ const Home = () => {
         <div className="main-container">
             <div className="header">
                 <h2>Online free quizzes</h2>
+                <h2>Play random quiz</h2>
             </div>
             {/* search bar will be here */}
             <div className="quiz-categories">
@@ -26,7 +27,10 @@ const Home = () => {
                 ))}
                 {/* attribution: <a href="https://www.flaticon.com/free-icons/geography" title="geography icons">Geography icons created by Freepik - Flaticon</a> 
                 <a href="https://www.flaticon.com/free-icons/history" title="history icons">History icons created by Freepik - Flaticon</a>
-                <a href="https://www.flaticon.com/free-icons/biology" title="biology icons">Biology icons created by Eucalyp - Flaticon</a>*/}
+                <a href="https://www.flaticon.com/free-icons/biology" title="biology icons">Biology icons created by Eucalyp - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/abstract" title="abstract icons">Abstract icons created by Freepik - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/general" title="general icons">General icons created by Vectors Tank - Flaticon</a>*/
+                }
             </div>
         </div>
     )

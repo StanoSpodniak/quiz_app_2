@@ -4,6 +4,8 @@ const useFetchQuizData = (quizParams) => {
     const baseUrl = "https://the-trivia-api.com/v2/questions/";
     const [url, setUrl] = useState("");
 
+    const removeCategoryTag = ["music", "film", "sport", "tv", "food", "philosophy", "politics"];
+
     const [data, setData] = useState(null);
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
@@ -11,6 +13,10 @@ const useFetchQuizData = (quizParams) => {
     useEffect(() => {
         let urlStr = baseUrl;
         let params = `?limit=10&categories=${quizParams.category}`;
+
+        if(removeCategoryTag.includes(quizParams.tag)) {
+            params = "?limit=10";
+        }
 
         if(quizParams.tag !== "none") {
             params += "&tags=" + quizParams.tag;
@@ -22,8 +28,6 @@ const useFetchQuizData = (quizParams) => {
     }, [quizParams])
 
     useEffect(() => {   
-        
-        
         fetch(url)
         .then(res => {
             console.log(url);

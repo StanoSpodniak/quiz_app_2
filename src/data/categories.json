@@ -8,8 +8,12 @@
             "color": "white",
             "quizzes": [
                 {"id": 101, "name": "Geography General", "tag": "none"},
-                {"id": 104, "name": "USA", "tag": "usa"},
-                {"id": 105, "name": "Capital Cities", "tag": "capital_cities"}
+                {"id": 102, "name": "Asia", "tag": "asia"},
+                {"id": 103, "name": "Africa", "tag": "africa"},
+                {"id": 104, "name": "Europe", "tag": "europe"},
+                {"id": 105, "name": "South America", "tag": "south_america"},
+                {"id": 106, "name": "USA", "tag": "usa"},
+                {"id": 107, "name": "Capital Cities", "tag": "capital_cities"}
             ]
         },
         {
@@ -17,23 +21,61 @@
             "name": "history",
             "nameCapitalized": "HISTORY",
             "backgroundColor": "coral",
-            "color": "black",
+            "color": "white",
             "quizzes": [
-                {"id": 201, "name": "History Easy", "difficulty": "easy"},
-                {"id": 202, "name": "History Medium", "difficulty": "medium"},
-                {"id": 203, "name": "History Hard", "difficulty": "hard"}
+                {"id": 201, "name": "History General", "tag": "none"},
+                {"id": 202, "name": "Middle Ages", "tag": "middle_ages"},
+                {"id": 204, "name": "World War I", "tag": "world_war_1"},
+                {"id": 205, "name": "World War II", "tag": "world_war_2"},
+                {"id": 206, "name": "History of Europe", "tag": "europe"},
+                {"id": 208, "name": "History of USA", "tag": "usa"},
+                {"id": 209, "name": "Famous Rulers", "tag": "kings"}
             ]
         },
         {
             "id": 3,
             "name": "science",
             "nameCapitalized": "SCIENCE",
-            "backgroundColor": "#90EE90",
-            "color": "black",
+            "backgroundColor": "#3CB371",
+            "color": "white",
             "quizzes": [
-                {"id": 301, "name": "Science Easy", "difficulty": "easy"},
-                {"id": 302, "name": "Science Medium", "difficulty": "medium"},
-                {"id": 303, "name": "Science Hard", "difficulty": "hard"}
+                {"id": 301, "name": "Science General", "tag": "none"},
+                {"id": 302, "name": "Physics", "tag": "physics"},
+                {"id": 303, "name": "Biology", "tag": "biology"},
+                {"id": 304, "name": "Astronomy", "tag": "astronomy"},
+                {"id": 305, "name": "Chemistry", "tag": "chemistry"},
+                {"id": 306, "name": "Geology", "tag": "geology"},
+                {"id": 307, "name": "Animals", "tag": "animals"},
+                {"id": 308, "name": "Technology", "tag": "technology"}
+            ]
+        },
+        {
+            "id": 4,
+            "name": "arts",
+            "nameCapitalized": "ARTS",
+            "backgroundColor": "#BA55D3",
+            "color": "white",
+            "quizzes": [
+                {"id": 401, "name": "Arts General", "tag": "none"},
+                {"id": 402, "name": "Music", "tag": "music"},
+                {"id": 403, "name": "Literature", "tag": "literature"},
+                {"id": 404, "name": "Painting", "tag": "painting"},
+                {"id": 405, "name": "Film", "tag": "film"}
+            ]
+        },
+        {
+            "id": 4,
+            "name": "miscelenious",
+            "nameCapitalized": "MISCELENIOUS",
+            "backgroundColor": "#BDB76B",
+            "color": "white",
+            "quizzes": [
+                {"id": 501, "name": "General Knowledge", "tag": "general_knowledge"},
+                {"id": 502, "name": "Sports", "tag": "sport"},
+                {"id": 503, "name": "TV", "tag": "tv"},
+                {"id": 504, "name": "Cuisine", "tag": "food"},
+                {"id": 505, "name": "Philosophy", "tag": "philosophy"},
+                {"id": 506, "name": "Politics", "tag": "politics"}
             ]
         }
     ]
