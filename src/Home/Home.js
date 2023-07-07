@@ -19,7 +19,7 @@ const Home = () => {
                         </div>
                         <div className="quizzes">
                             {category.quizzes.map((quiz) => (
-                                <a key={quiz.id} href={`/quiz/${category.name}/${quiz.difficulty}`}><button>{quiz.name}</button></a>
+                                <a key={quiz.id} href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
                             ))}
                         </div>
                     </div>

@@ -7,14 +7,9 @@
             "backgroundColor": "cornflowerblue",
             "color": "white",
             "quizzes": [
-                {"id": 101, "name": "Geography Easy", "difficulty": "easy"},
-                {"id": 102, "name": "Geography Medium", "difficulty": "medium"},
-                {"id": 103, "name": "Geography Hard", "difficulty": "hard"},
-                {"id": 104, "name": "Flags"},
-                {"id": 105, "name": "Capital Cities Easy", "difficulty": "easy"},
-                {"id": 106, "name": "Capital Cities Medium", "difficulty": "medium"},
-                {"id": 107, "name": "Capital Cities Hard", "difficulty": "hard"},
-                {"id": 108, "name": "USA"}
+                {"id": 101, "name": "Geography General", "tag": "none"},
+                {"id": 104, "name": "USA", "tag": "usa"},
+                {"id": 105, "name": "Capital Cities", "tag": "capital_cities"}
             ]
         },
         {

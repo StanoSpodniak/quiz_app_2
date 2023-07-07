@@ -1,10 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import useFetchQuizData from './useFetchQuizData';
 import './Quiz.css';
 //https://the-trivia-api.com/docs/v2/#tag/Questions/operation/getRandomQuestionshttps://the-trivia-api.com/docs/v2/#tag/Questions/operation/getRandomQuestions
+//help@the-trivia-api.com
 //use icons from https://www.flaticon.com/search?word=history on homepage
 
-const Quiz = () => {
+//make imageQuiz file and functionality
+
+const Quiz = () => { 
+    const quizParams = useParams();
+    const {data, error, isPending} = useFetchQuizData(quizParams);
     
     const buttons = [
             { id: 0 },
@@ -14,7 +20,6 @@ const Quiz = () => {
     ];
     const color = {neutral: "white", correct: "#6BCD6F", incorrect: "#CD6F6B", hover: "#F5F5F5"};
 
-    const [data, setData] = useState(null);
     const [question, setQuestion] = useState('');
     const [choices, setChoices] = useState([]);
 
@@ -26,23 +31,6 @@ const Quiz = () => {
 
     const navigate = useNavigate();
     const [gameEnded, setGameEnded] = useState(false);
-
-    const quizData = useParams();
-    const url = `https://the-trivia-api.com/v2/questions/?difficulties=${quizData.difficulty}&limit=10&categories=${quizData.category}`;
-
-    const fetchData = async (url) => {   
-        try {
-            const response = await fetch(url);
-            const jsonData = await response.json();
-            setData(jsonData);
-          } catch (error) {
-            console.error('Error fetching data:', error);
-          }
-    };
-
-    useEffect(() => {
-        fetchData(url);
-    }, []);
 
     useEffect(() => {
         if (data) {
@@ -143,7 +131,7 @@ const Quiz = () => {
     return ( 
         <div className="quiz-container">
             <div className="quiz-header">
-                <h2 id="category-name">{firstLetterCapitalized(quizData.category)} {firstLetterCapitalized(quizData.difficulty)}</h2>
+                <h2 id="category-name">{firstLetterCapitalized(quizParams.quizName)}</h2>
                 <div className="quiz-info">
                     {data && <h2>Question: {questionCount}/{data.length}</h2>}
                     {data && <h2>Score: {score}/{data.length}</h2>}
