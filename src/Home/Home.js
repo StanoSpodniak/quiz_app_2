@@ -2,6 +2,7 @@ import "./Home.css";
 import categories from "../data/categories";
 
 const Home = () => {
+    //optimize homepage for mobile devices
     const quizCategories = {categories};
     
     return (

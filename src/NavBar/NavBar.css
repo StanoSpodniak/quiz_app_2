@@ -1,14 +1,14 @@
 /* Nav bar */
 .navbar {
-    padding: 20px;
     display: flex;
     align-items: center;
-    max-width: 1000px;
+    max-width: 60%;
     margin: 0 auto;
     border-bottom: 1px solid silver;
   }
   
   .navbar h1 {
+    padding: 20px;
     font-size: 2em;
     color: coral;
   }

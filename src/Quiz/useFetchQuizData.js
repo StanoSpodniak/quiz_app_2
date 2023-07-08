@@ -4,11 +4,11 @@ const useFetchQuizData = (quizParams) => {
     const baseUrl = "https://the-trivia-api.com/v2/questions/";
     const [url, setUrl] = useState("");
 
-    const removeCategoryTag = ["music", "film", "sport", "tv", "food", "philosophy", "politics"];
-
     const [data, setData] = useState(null);
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
+
+    const removeCategoryTag = ["music", "film", "sport", "tv", "food", "philosophy", "politics"];
 
     useEffect(() => {
         let urlStr = baseUrl;
