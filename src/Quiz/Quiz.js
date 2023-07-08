@@ -29,6 +29,7 @@ const Quiz = () => {
     const [questionCount, setQuestionCount] = useState(0);
     const [score, setScore] = useState(0);
     const [addScore, setAddScore] = useState(false);
+    const [isAnswered, setIsAnswered] = useState(false);
 
     const navigate = useNavigate();
     const [gameEnded, setGameEnded] = useState(false);
@@ -42,10 +43,11 @@ const Quiz = () => {
     }, [data]);
 
     useEffect(() => {
-        if(addScore) {
+        if(addScore && isAnswered) {
+            console.log(score);
             setScore(score + 1);
         }
-    }, [questionCount])
+    }, [isAnswered])
 
     useEffect(() => {
         if(gameEnded) {
@@ -85,11 +87,13 @@ const Quiz = () => {
         setButtonsDisabled(true);
 
         if (userAnswer === correctAnswer) {
+            setIsAnswered(true);
             setAddScore(true);
             event.target.style.backgroundColor = color.correct;
             event.target.style.color = color.neutral;
             event.target.style.border = "none";
         } else {
+            setIsAnswered(true);
             setAddScore(false);
             event.target.style.backgroundColor = color.incorrect;
             event.target.style.color = color.neutral;
@@ -106,7 +110,8 @@ const Quiz = () => {
 
         setTimeout(() => {
             resetButtonsColor(filteredOptions);
-            
+            setIsAnswered(false);
+
             if (questionCount < data.length) {
                 setButtonsDisabled(false);
                 prepareQuestion(data);

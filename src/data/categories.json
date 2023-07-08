@@ -75,7 +75,8 @@
                 {"id": 503, "name": "TV", "tag": "tv"},
                 {"id": 504, "name": "Cuisine", "tag": "food"},
                 {"id": 505, "name": "Philosophy", "tag": "philosophy"},
-                {"id": 506, "name": "Politics", "tag": "politics"}
+                {"id": 506, "name": "Politics", "tag": "politics"},
+                {"id": 507, "name": "Psychology", "tag": "psychology"}
             ]
         }
     ]

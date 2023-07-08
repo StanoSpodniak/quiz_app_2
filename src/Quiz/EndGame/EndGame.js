@@ -11,7 +11,7 @@ const EndGame = () => {
 
     return (
         <div className="endGame-panel" >
-            <h3>Congratulations! You have finished the quiz "{quizData.category} {quizData.difficulty}".</h3>
+            <h3>Congratulations! You have finished the quiz "{quizData.quizName}".</h3>
             <h2>Your final score is {quizData.score}/{quizData.questionCount}</h2>
             <div className="endGame-buttons">
                 <button id="play-again-button" onClick={() => navigate(-1)}>Play Again</button>
