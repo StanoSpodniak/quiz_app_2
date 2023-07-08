@@ -30,7 +30,6 @@ const useFetchQuizData = (quizParams) => {
     useEffect(() => {   
         fetch(url)
         .then(res => {
-            console.log(url);
             if(!res.ok) {
                 throw Error('could not fetch the data from that resources');
             }
