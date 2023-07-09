@@ -11,7 +11,16 @@ const Home = () => {
                 <h2>Online free quizzes</h2>
                 <h2>Play random quiz</h2>
             </div>
-            {/* search bar will be here */}
+            <div className="search-container">
+                <form className="search-form">
+                    <input
+                        className="search-bar"
+                        type="text"
+                        placeholder="Search Quiz"
+                    />
+                    <img src="icons/search.png" id="search_icon" />
+                </form>
+            </div>
             <div className="quiz-categories">
                 {quizCategories.categories.categories.map((category) => (
                     <div key={category.id}>
@@ -30,7 +39,9 @@ const Home = () => {
                 <a href="https://www.flaticon.com/free-icons/history" title="history icons">History icons created by Freepik - Flaticon</a>
                 <a href="https://www.flaticon.com/free-icons/biology" title="biology icons">Biology icons created by Eucalyp - Flaticon</a>
                 <a href="https://www.flaticon.com/free-icons/abstract" title="abstract icons">Abstract icons created by Freepik - Flaticon</a>
-                <a href="https://www.flaticon.com/free-icons/general" title="general icons">General icons created by Vectors Tank - Flaticon</a>*/
+                <a href="https://www.flaticon.com/free-icons/general" title="general icons">General icons created by Vectors Tank - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/political" title="political icons">Political icons created by Freepik - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/magnifying-glass" title="magnifying glass icons">Magnifying glass icons created by Anggara - Flaticon</a>*/
                 }
             </div>
         </div>

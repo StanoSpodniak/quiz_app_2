@@ -4,6 +4,48 @@
     background-color: gainsboro;
 }
 
+.search-container {
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+    justify-content: center;
+}
+
+.search-form {
+    display: flex;
+    width: 30%;
+    position: relative;
+    justify-content: center;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin: 20px 0;
+    height: 35px;
+    border: 2px solid #ADD8E6;
+    color: #4682B4;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.search-bar::placeholder {
+    color: #87CEEB;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #4682B4;
+    box-shadow: 0 0 5px #007bff;
+}
+
+#search_icon {
+    position: relative;
+    height: 30px;
+    right: 40px;
+    top: 25px;
+}
+
 .quiz-categories {
     margin: 0 auto;
     width: 55%;
@@ -11,7 +53,7 @@
 
 .category {
     display: flex;
-    margin: 20px 0;
+    margin-bottom: 20px;
     height: 55px;
     align-items: center;
     border-radius: 10px;
@@ -28,14 +70,10 @@
 
 .quizzes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 210px));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 18%));
     justify-content: space-between;
-    row-gap: 30px;
+    gap: 20px;
     margin-bottom: 50px;
-}
-
-.quizzes a {
-
 }
 
 .quizzes button {
@@ -44,11 +82,49 @@
     border: 2px solid #ADD8E6;
     border-radius: 10px;
     background-color: white;
-    font-size: clamp(12px, 1vw, 30px);
+    font-size: clamp(20px, 1vw, 30px);
     padding: 5px;
 }
 
 .quizzes button:hover {
     cursor: pointer;
     background-color: #F0F8FF;
+}
+
+@media screen and (max-width: 1200px) {
+    .quiz-categories {
+        width: 60%;
+    }
+
+    .quizzes {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 25%));
+    }
+}
+
+@media screen and (max-width: 975px) {
+    .search-container {
+        width: 70%;
+    }
+
+    .quiz-categories {
+        width: 70%;
+    }
+
+    .quizzes {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 30%));
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .search-container {
+        width: 83%;
+    }  
+
+    .quiz-categories {
+        width: 83%;
+    }
+
+    .quizzes {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 45%));
+    }
 }

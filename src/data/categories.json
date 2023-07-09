@@ -18,22 +18,6 @@
         },
         {
             "id": 2,
-            "name": "history",
-            "nameCapitalized": "HISTORY",
-            "backgroundColor": "coral",
-            "color": "white",
-            "quizzes": [
-                {"id": 201, "name": "History General", "tag": "none"},
-                {"id": 202, "name": "Middle Ages", "tag": "middle_ages"},
-                {"id": 204, "name": "World War I", "tag": "world_war_1"},
-                {"id": 205, "name": "World War II", "tag": "world_war_2"},
-                {"id": 206, "name": "History of Europe", "tag": "europe"},
-                {"id": 208, "name": "History of USA", "tag": "usa"},
-                {"id": 209, "name": "Famous Rulers", "tag": "kings"}
-            ]
-        },
-        {
-            "id": 3,
             "name": "science",
             "nameCapitalized": "SCIENCE",
             "backgroundColor": "#3CB371",
@@ -47,6 +31,22 @@
                 {"id": 306, "name": "Geology", "tag": "geology"},
                 {"id": 307, "name": "Animals", "tag": "animals"},
                 {"id": 308, "name": "Technology", "tag": "technology"}
+            ]
+        },
+        {
+            "id": 3,
+            "name": "history",
+            "nameCapitalized": "HISTORY",
+            "backgroundColor": "coral",
+            "color": "white",
+            "quizzes": [
+                {"id": 201, "name": "History General", "tag": "none"},
+                {"id": 202, "name": "Middle Ages", "tag": "middle_ages"},
+                {"id": 204, "name": "World War I", "tag": "world_war_1"},
+                {"id": 205, "name": "World War II", "tag": "world_war_2"},
+                {"id": 206, "name": "History of Europe", "tag": "europe"},
+                {"id": 208, "name": "History of USA", "tag": "usa"},
+                {"id": 209, "name": "Famous Rulers", "tag": "kings"}
             ]
         },
         {
@@ -65,18 +65,29 @@
         },
         {
             "id": 5,
+            "name": "humanities",
+            "nameCapitalized": "HUMANITIES",
+            "backgroundColor": "#4682B4",
+            "color": "white",
+            "quizzes": [
+                {"id": 501, "name": "Philosophy", "tag": "philosophy"},
+                {"id": 502, "name": "Politics", "tag": "politics"},
+                {"id": 503, "name": "Psychology", "tag": "psychology"},
+                {"id": 504, "name": "Law", "tag": "law"},
+                {"id": 505, "name": "Religion", "tag": "religion"}
+            ]
+        },
+        {
+            "id": 6,
             "name": "miscelenious",
             "nameCapitalized": "MISCELENIOUS",
             "backgroundColor": "#BDB76B",
             "color": "white",
             "quizzes": [
-                {"id": 501, "name": "General Knowledge", "tag": "general_knowledge"},
-                {"id": 502, "name": "Sports", "tag": "sport"},
-                {"id": 503, "name": "TV", "tag": "tv"},
-                {"id": 504, "name": "Cuisine", "tag": "food"},
-                {"id": 505, "name": "Philosophy", "tag": "philosophy"},
-                {"id": 506, "name": "Politics", "tag": "politics"},
-                {"id": 507, "name": "Psychology", "tag": "psychology"}
+                {"id": 601, "name": "General Knowledge", "tag": "general_knowledge"},
+                {"id": 602, "name": "Sports", "tag": "sport"},
+                {"id": 603, "name": "TV", "tag": "tv"},
+                {"id": 604, "name": "Cuisine", "tag": "food"}
             ]
         }
     ]
