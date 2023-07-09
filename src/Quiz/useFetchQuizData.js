@@ -8,7 +8,7 @@ const useFetchQuizData = (quizParams) => {
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
 
-    const removeCategoryTag = ["music", "film", "sport", "tv", "food", "philosophy", "politics", "psychology", "religion", "law"];
+    const removeCategoryTag = ["music", "film", "sport", "tv", "food", "philosophy", "politics", "psychology", "religion", "law", "words"];
 
     useEffect(() => {
         let urlStr = baseUrl;

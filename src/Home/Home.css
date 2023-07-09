@@ -84,6 +84,7 @@
     background-color: white;
     font-size: clamp(20px, 1vw, 30px);
     padding: 5px;
+    color: #396a93;
 }
 
 .quizzes button:hover {

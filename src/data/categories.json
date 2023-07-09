@@ -85,9 +85,10 @@
             "color": "white",
             "quizzes": [
                 {"id": 601, "name": "General Knowledge", "tag": "general_knowledge"},
-                {"id": 602, "name": "Sports", "tag": "sport"},
-                {"id": 603, "name": "TV", "tag": "tv"},
-                {"id": 604, "name": "Cuisine", "tag": "food"}
+                {"id": 602, "name": "Word Meanings", "tag": "words"},
+                {"id": 603, "name": "Sports", "tag": "sport"},
+                {"id": 604, "name": "TV", "tag": "tv"},
+                {"id": 605, "name": "Cuisine", "tag": "food"}
             ]
         }
     ]
