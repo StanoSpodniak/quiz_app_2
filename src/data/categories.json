@@ -12,14 +12,24 @@
                 {"id": 103, "name": "Africa", "tag": "africa"},
                 {"id": 104, "name": "Europe", "tag": "europe"},
                 {"id": 105, "name": "South America", "tag": "south_america"},
-                {"id": 106, "name": "USA", "tag": "usa"},
-                {"id": 107, "name": "Capital Cities", "tag": "capital_cities"}
+                {"id": 106, "name": "Australia", "tag": "australia"},
+                {"id": 106, "name": "Seas & Oceans", "tag": "ocean,oceans,sea,seas"},
+                {"id": 107, "name": "Capital Cities", "tag": "capital_cities"},
+                {"id": 108, "name": "USA", "tag": "usa"},
+                {"id": 109, "name": "China", "tag": "china"},
+                {"id": 110, "name": "India", "tag": "india"},
+                {"id": 111, "name": "Canada", "tag": "canada"},
+                {"id": 112, "name": "France", "tag": "france"},
+                {"id": 113, "name": "Italy", "tag": "italy"},
+                {"id": 114, "name": "Germany", "tag": "germany"},
+                {"id": 114, "name": "United Kingdom", "tag": "uk,great_britain,england,scotland,wales"},
+                {"id": 115, "name": "Russia", "tag": "russia"}
             ]
         },
         {
             "id": 2,
             "name": "science",
-            "nameCapitalized": "SCIENCE",
+            "nameCapitalized": "NATURE & SCIENCE",
             "backgroundColor": "#3CB371",
             "color": "white",
             "quizzes": [
@@ -30,7 +40,9 @@
                 {"id": 305, "name": "Chemistry", "tag": "chemistry"},
                 {"id": 306, "name": "Geology", "tag": "geology"},
                 {"id": 307, "name": "Animals", "tag": "animals"},
-                {"id": 308, "name": "Technology", "tag": "technology"}
+                {"id": 307, "name": "Dinosaurs", "tag": "dinosaurs,dinosaur"},
+                {"id": 308, "name": "Technology", "tag": "technology"},
+                {"id": 308, "name": "Math", "tag": "mathematics"}
             ]
         },
         {
@@ -46,7 +58,8 @@
                 {"id": 205, "name": "World War II", "tag": "world_war_2"},
                 {"id": 206, "name": "History of Europe", "tag": "europe"},
                 {"id": 208, "name": "History of USA", "tag": "usa"},
-                {"id": 209, "name": "Famous Rulers", "tag": "kings"}
+                {"id": 209, "name": "Famous Rulers", "tag": "kings"},
+                {"id": 210, "name": "Vikings", "tag": "vikings"}
             ]
         },
         {
@@ -60,12 +73,13 @@
                 {"id": 402, "name": "Music", "tag": "music"},
                 {"id": 403, "name": "Literature", "tag": "literature"},
                 {"id": 404, "name": "Painting", "tag": "painting"},
-                {"id": 405, "name": "Film", "tag": "film"}
+                {"id": 405, "name": "Film", "tag": "film"},
+                {"id": 406, "name": "Architecture", "tag": "architecture"}
             ]
         },
         {
             "id": 5,
-            "name": "humanities",
+            "name": "society_and_culture",
             "nameCapitalized": "HUMANITIES",
             "backgroundColor": "#4682B4",
             "color": "white",
@@ -79,16 +93,33 @@
         },
         {
             "id": 6,
+            "name": "sport_and_leisure",
+            "nameCapitalized": "SPORTS",
+            "backgroundColor": "#ff3333",
+            "color": "white",
+            "quizzes": [
+                {"id": 601, "name": "Sports General", "tag": "sport"},
+                {"id": 605, "name": "Soccer", "tag": "soccer"},
+                {"id": 606, "name": "Basketball", "tag": "basketball"},
+                {"id": 607, "name": "American Football", "tag": "american_football"},
+                {"id": 608, "name": "Baseball", "tag": "baseball"},
+                {"id": 609, "name": "Tenis", "tag": "tennis"},
+                {"id": 610, "name": "Ice Hockey", "tag": "hockey"},
+                {"id": 611, "name": "Boxing", "tag": "boxing"}
+            ]
+        },
+        {
+            "id": 7,
             "name": "miscelenious",
             "nameCapitalized": "MISCELENIOUS",
             "backgroundColor": "#BDB76B",
             "color": "white",
             "quizzes": [
-                {"id": 601, "name": "General Knowledge", "tag": "general_knowledge"},
-                {"id": 602, "name": "Word Meanings", "tag": "words"},
-                {"id": 603, "name": "Sports", "tag": "sport"},
-                {"id": 604, "name": "TV", "tag": "tv"},
-                {"id": 605, "name": "Cuisine", "tag": "food"}
+                {"id": 701, "name": "General Knowledge", "tag": "general_knowledge"},
+                {"id": 702, "name": "Word Meanings", "tag": "words"},
+                {"id": 704, "name": "TV", "tag": "tv"},
+                {"id": 705, "name": "Cuisine", "tag": "food"},
+                {"id": 706, "name": "Chess", "tag": "chess"}
             ]
         }
     ]
