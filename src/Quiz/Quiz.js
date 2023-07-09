@@ -44,7 +44,6 @@ const Quiz = () => {
 
     useEffect(() => {
         if(addScore && isAnswered) {
-            console.log(score);
             setScore(score + 1);
         }
     }, [isAnswered])
@@ -77,8 +76,6 @@ const Quiz = () => {
     function handleAnswer(event) {
         const userAnswer = event.target.innerText;
         const correctAnswer = data[questionCount - 1].correctAnswer;
-        console.log(correctAnswer);
-        console.log(userAnswer);
 
         let options = buttonEls.current;
         const filteredOptions = options.filter(element => element !== null);

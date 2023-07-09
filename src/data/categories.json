@@ -13,17 +13,17 @@
                 {"id": 104, "name": "Europe", "tag": "europe"},
                 {"id": 105, "name": "South America", "tag": "south_america"},
                 {"id": 106, "name": "Australia", "tag": "australia"},
-                {"id": 106, "name": "Seas & Oceans", "tag": "ocean,oceans,sea,seas"},
-                {"id": 107, "name": "Capital Cities", "tag": "capital_cities"},
-                {"id": 108, "name": "USA", "tag": "usa"},
-                {"id": 109, "name": "China", "tag": "china"},
-                {"id": 110, "name": "India", "tag": "india"},
-                {"id": 111, "name": "Canada", "tag": "canada"},
-                {"id": 112, "name": "France", "tag": "france"},
-                {"id": 113, "name": "Italy", "tag": "italy"},
-                {"id": 114, "name": "Germany", "tag": "germany"},
-                {"id": 114, "name": "United Kingdom", "tag": "uk,great_britain,england,scotland,wales"},
-                {"id": 115, "name": "Russia", "tag": "russia"}
+                {"id": 107, "name": "Seas & Oceans", "tag": "ocean,oceans,sea,seas"},
+                {"id": 108, "name": "Capital Cities", "tag": "capital_cities"},
+                {"id": 109, "name": "USA", "tag": "usa"},
+                {"id": 110, "name": "China", "tag": "china"},
+                {"id": 111, "name": "India", "tag": "india"},
+                {"id": 112, "name": "Canada", "tag": "canada"},
+                {"id": 113, "name": "France", "tag": "france"},
+                {"id": 114, "name": "Italy", "tag": "italy"},
+                {"id": 115, "name": "Germany", "tag": "germany"},
+                {"id": 116, "name": "United Kingdom", "tag": "uk,great_britain,england,scotland,wales"},
+                {"id": 117, "name": "Russia", "tag": "russia"}
             ]
         },
         {
@@ -34,15 +34,16 @@
             "color": "white",
             "quizzes": [
                 {"id": 301, "name": "Science General", "tag": "none"},
-                {"id": 302, "name": "Physics", "tag": "physics"},
-                {"id": 303, "name": "Biology", "tag": "biology"},
-                {"id": 304, "name": "Astronomy", "tag": "astronomy"},
-                {"id": 305, "name": "Chemistry", "tag": "chemistry"},
-                {"id": 306, "name": "Geology", "tag": "geology"},
-                {"id": 307, "name": "Animals", "tag": "animals"},
-                {"id": 307, "name": "Dinosaurs", "tag": "dinosaurs,dinosaur"},
-                {"id": 308, "name": "Technology", "tag": "technology"},
-                {"id": 308, "name": "Math", "tag": "mathematics"}
+                {"id": 302, "name": "Nature General", "tag": "nature"},
+                {"id": 303, "name": "Physics", "tag": "physics"},
+                {"id": 304, "name": "Biology", "tag": "biology"},
+                {"id": 305, "name": "Astronomy", "tag": "astronomy"},
+                {"id": 306, "name": "Chemistry", "tag": "chemistry"},
+                {"id": 307, "name": "Geology", "tag": "geology"},
+                {"id": 308, "name": "Animals", "tag": "animals"},
+                {"id": 309, "name": "Dinosaurs", "tag": "dinosaurs,dinosaur"},
+                {"id": 310, "name": "Technology", "tag": "technology"},
+                {"id": 311, "name": "Math", "tag": "mathematics"}
             ]
         },
         {
@@ -80,15 +81,20 @@
         {
             "id": 5,
             "name": "society_and_culture",
-            "nameCapitalized": "HUMANITIES",
+            "nameCapitalized": "PEOPLE & SOCIETY",
             "backgroundColor": "#4682B4",
             "color": "white",
             "quizzes": [
-                {"id": 501, "name": "Philosophy", "tag": "philosophy"},
-                {"id": 502, "name": "Politics", "tag": "politics"},
-                {"id": 503, "name": "Psychology", "tag": "psychology"},
-                {"id": 504, "name": "Law", "tag": "law"},
-                {"id": 505, "name": "Religion", "tag": "religion"}
+                {"id": 501, "name": "Society General", "tag": "none"},
+                {"id": 502, "name": "Philosophy", "tag": "philosophy"},
+                {"id": 503, "name": "Politics", "tag": "politics"},
+                {"id": 504, "name": "Psychology", "tag": "psychology"},
+                {"id": 505, "name": "Law", "tag": "law"},
+                {"id": 506, "name": "Religion", "tag": "religion"},
+                {"id": 507, "name": "Bible & Christianity", "tag": "bible,christianity"},
+                {"id": 508, "name": "Islam", "tag": "islam"},
+                {"id": 509, "name": "Hinduism", "tag": "hinduism"},
+                {"id": 510, "name": "Judaism", "tag": "judaism"}
             ]
         },
         {
@@ -119,7 +125,8 @@
                 {"id": 702, "name": "Word Meanings", "tag": "words"},
                 {"id": 704, "name": "TV", "tag": "tv"},
                 {"id": 705, "name": "Cuisine", "tag": "food"},
-                {"id": 706, "name": "Chess", "tag": "chess"}
+                {"id": 706, "name": "Chess", "tag": "chess"},
+                {"id": 707, "name": "Harry Potter", "tag": "harry_potter"}
             ]
         }
     ]
