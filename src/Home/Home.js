@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import categories from "../data/categories";
 import "./Home.css";
 
@@ -7,24 +7,31 @@ const Home = () => {
 
     const [searchTerm, setSearchTerm] = useState('');
     const [search, setSearch] = useState(false);
-    const [searchResult, setSearchResult] = useState("");
+    const [searchResult, setSearchResult] = useState({});
     
+    useEffect(() => {
+        if (searchResult.length > 0) {
+            setSearch(true);
+            console.log(searchResult[0].name);
+        }
+
+    }, [searchResult]);
+
     const handleChange = (event) => {
         setSearchTerm(event.target.value);
-        if(searchTerm.length >= 2) {
-
-        } else {
-            setSearch(false);
-        }
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
         if(searchTerm.length >= 3) {
-            setSearch(true);
-
-            setSearchResult(quizCategories.categories.categories[0].quizzes.filter((quiz) => quiz.name === searchTerm));
-            console.log(searchResult);
+            let result = quizCategories.categories.categories.map((category) => {
+                return category.quizzes.filter((quiz) => quiz.name === searchTerm);
+            })
+            result = result.filter((quiz) => quiz.length > 0);
+            
+            if (result.length > 0) {
+                setSearchResult(result[0]);
+            }
         } else {
             setSearch(false);
         }
@@ -45,12 +52,14 @@ const Home = () => {
                         value={searchTerm}
                         onChange={handleChange}
                     />
-                    <img src="icons/search.png" id="search_icon" />
+                    <img src="icons/search.png" id="search_icon" alt="search icon" />
                 </form>
             </div>
             <div className="quiz-categories">
                 {search ? (
-                    <p>Search</p>
+                    searchResult.map((result) => (
+                        <p key={result.id}>{result.name}</p>
+                    ))
                 ) : (
                     quizCategories.categories.categories.map((category) => (
                         <div key={category.id}>

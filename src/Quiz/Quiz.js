@@ -46,7 +46,7 @@ const Quiz = () => {
         if(addScore && isAnswered) {
             setScore(score + 1);
         }
-    }, [isAnswered])
+    }, [isAnswered]);
 
     useEffect(() => {
         if(gameEnded) {
