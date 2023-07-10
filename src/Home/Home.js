@@ -25,8 +25,23 @@ const Home = () => {
         event.preventDefault();
         if(searchTerm.length >= 3) {
             let result = quizCategories.categories.categories.map((category) => {
-                return category.quizzes.filter((quiz) => quiz.name === searchTerm);
+                return category.quizzes.filter((quiz) => quiz.name.includes(searchTerm));
+
+                /*category.quizzes.map((quiz) => {
+                    /*if(quiz.name === searchTerm) {
+                        return category;
+                    } else {
+                        return "none";
+                    }
+                })*/
+
+                /*if(category.quizzes.name === searchTerm) {
+                    return category;
+                } else {
+                    return "none";
+                }*/
             })
+
             result = result.filter((quiz) => quiz.length > 0);
             
             if (result.length > 0) {
@@ -57,9 +72,12 @@ const Home = () => {
             </div>
             <div className="quiz-categories">
                 {search ? (
-                    searchResult.map((result) => (
-                        <p key={result.id}>{result.name}</p>
-                    ))
+                    <div className="quizzes">
+                        {searchResult.map((quiz) => (
+                            /* the category is not a variable */
+                            <a key={quiz.id} href={`/quiz/geography/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
+                        ))}
+                    </div>
                 ) : (
                     quizCategories.categories.categories.map((category) => (
                         <div key={category.id}>
