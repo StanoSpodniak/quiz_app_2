@@ -5,6 +5,8 @@ import "./Home.css";
 const Home = () => {
     const quizCategories = {categories};
 
+    const [quizNames, setQuizNames] = useState([]);
+
     const [searchTerm, setSearchTerm] = useState('');
     const [search, setSearch] = useState(false);
     const [searchResult, setSearchResult] = useState({});
@@ -12,7 +14,6 @@ const Home = () => {
     useEffect(() => {
         if (searchResult.length > 0) {
             setSearch(true);
-            console.log(searchResult[0].name);
         }
 
     }, [searchResult]);
@@ -24,29 +25,34 @@ const Home = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         if(searchTerm.length >= 3) {
-            let result = quizCategories.categories.categories.map((category) => {
-                return category.quizzes.filter((quiz) => quiz.name.includes(searchTerm));
+            let quizzes =  quizCategories.categories.categories.map((category) => 
+                category.quizzes.map((quiz) => {
+                    return quiz.name;
+                })
+            );
+            setQuizNames(quizzes);
 
-                /*category.quizzes.map((quiz) => {
-                    /*if(quiz.name === searchTerm) {
-                        return category;
-                    } else {
-                        return "none";
-                    }
-                })*/
+            //first check if category name includes searchTerm, if yes show whole category as a result
+            /*let searhedCategories = quizCategories.categories.categories.map((category) => category);
+            let results = searhedCategories.filter((category) => category.name.includes(searchTerm.toLowerCase()));
 
-                /*if(category.quizzes.name === searchTerm) {
-                    return category;
-                } else {
-                    return "none";
-                }*/
-            })
-
-            result = result.filter((quiz) => quiz.length > 0);
+            if (results.length > 0) {
+                setSearchResult(results);
+            }*/
             
-            if (result.length > 0) {
-                setSearchResult(result[0]);
+            let results = quizCategories.categories.categories.map((category) => {
+                return category.quizzes.filter((quiz) => quiz.name.includes(searchTerm));
+            })
+            results = results.filter((quiz) => quiz.length > 0);
+            
+            if (results.length > 0) {
+                setSearchResult(results.map(result => result));
+            } else {
+                results[0] = "Sorry, there is no search result for you querry.";
             }
+
+            setSearch(true);
+
         } else {
             setSearch(false);
         }
@@ -72,12 +78,98 @@ const Home = () => {
             </div>
             <div className="quiz-categories">
                 {search ? (
-                    <div className="quizzes">
-                        {searchResult.map((quiz) => (
-                            /* the category is not a variable */
-                            <a key={quiz.id} href={`/quiz/geography/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
-                        ))}
-                    </div>
+                    quizCategories.categories.categories.map((category) => {
+                        if(category.nameCapitalized.includes(searchTerm.toUpperCase())) {
+                            return (
+                                <div key={category.id}>
+                                    <div className="category" key={category.id} style={{backgroundColor: `${category.backgroundColor}`}}>
+                                        <img src={`icons/${category.name}.png`} alt={`${category.name} icon`} />
+                                        <h2 style={{color: `${category.color}`}} >{category.nameCapitalized}</h2>
+                                    </div>
+                                    <div className="quizzes">
+                                        {category.quizzes.map((quiz) => (
+                                            <a key={quiz.id} href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
+                                        ))}
+                                    </div>
+                                </div>
+                            );
+                        } else if (quizNames[0].includes(searchTerm)) {
+                            console.log(quizNames[0]);
+                            return (
+                                <div key={category.id}>
+                                    {searchResult.map((quiz) => (
+                                        <div className="quizzes">
+                                            {quiz.map((quiz) =>
+                                                <a key={quiz.id} href={`/quiz/${quiz.category}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            );
+
+
+                            /*searchResult.map((quiz) => {
+                                <div className="quizzes">
+                                    {quiz.map((quiz) =>
+                                        <a key={quiz.id} href={`/quiz/${quiz.category}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
+                                    )}
+                                </div>
+                            })*/
+
+                            /*category.quizzes.map((quiz) => {
+                                return (<a key={quiz.id} href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>)
+                                if(quiz.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                                    return (
+                                        <div className="quizzes">
+                                            <a key={quiz.id} href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
+                                        </div>
+                                    );
+                                }
+                            })*/
+                        }
+
+
+                            /*quizCategories.categories.categories.quizzes.map((quiz) => {
+                                if(quiz.name.includes(searchTerm.toLowerCase())) {
+                                    return (
+                                        <div className="quizzes">
+                                            {category.quizzes.map((quiz) => (
+                                                <a key={quiz.id} href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
+                                            ))}
+                                        </div>)
+                                } else {
+                                    return (<p>There are no results for your search querry.</p>)
+                                }
+                            })*/
+                    })
+                    
+                    /*quizCategories.categories.categories.quizzes.map((quiz) => {
+                        if(quiz.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                            return (
+                                <div className="quizzes">
+                                    <a key={quiz.id} href={`/quiz/${quiz.category}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
+                                </div>
+                            );
+                        }
+                    })*/
+
+                    /* 
+                    quizCategories.categories.categories.map((category) => (
+                        <div key={category.id}>
+                            <div className="category" key={category.id} style={{backgroundColor: `${category.backgroundColor}`}}>
+                                <img src={`icons/${category.name}.png`} alt={`${category.name} icon`} />
+                                <h2 style={{color: `${category.color}`}} >{category.nameCapitalized}</h2>
+                            </div>
+                            {searchResult.map((quiz) => (
+                                <div className="quizzes">
+                                    {quiz.map((quiz) =>
+                                        <a key={quiz.id} href={`/quiz/${quiz.category}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    ))
+                    */
                 ) : (
                     quizCategories.categories.categories.map((category) => (
                         <div key={category.id}>

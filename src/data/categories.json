@@ -7,15 +7,15 @@
             "backgroundColor": "cornflowerblue",
             "color": "white",
             "quizzes": [
-                {"id": 101, "name": "Geography General", "tag": "none"},
-                {"id": 102, "name": "Asia", "tag": "asia"},
+                {"id": 101, "name": "Geography General", "tag": "none", "category": "geography"},
+                {"id": 102, "name": "Asia", "tag": "asia", "category": "geography"},
                 {"id": 103, "name": "Africa", "tag": "africa"},
                 {"id": 104, "name": "Europe", "tag": "europe"},
                 {"id": 105, "name": "South America", "tag": "south_america"},
                 {"id": 106, "name": "Australia", "tag": "australia"},
                 {"id": 107, "name": "Seas & Oceans", "tag": "ocean,oceans,sea,seas"},
                 {"id": 108, "name": "Capital Cities", "tag": "capital_cities"},
-                {"id": 109, "name": "USA", "tag": "usa"},
+                {"id": 109, "name": "USA", "tag": "usa", "category": "geography"},
                 {"id": 110, "name": "China", "tag": "china"},
                 {"id": 111, "name": "India", "tag": "india"},
                 {"id": 112, "name": "Canada", "tag": "canada"},
@@ -33,8 +33,8 @@
             "backgroundColor": "#3CB371",
             "color": "white",
             "quizzes": [
-                {"id": 301, "name": "Science General", "tag": "none"},
-                {"id": 302, "name": "Nature General", "tag": "nature"},
+                {"id": 301, "name": "Science General", "tag": "none", "category": "science"},
+                {"id": 302, "name": "Nature General", "tag": "nature", "category": "science"},
                 {"id": 303, "name": "Physics", "tag": "physics"},
                 {"id": 304, "name": "Biology", "tag": "biology"},
                 {"id": 305, "name": "Astronomy", "tag": "astronomy"},
@@ -58,7 +58,7 @@
                 {"id": 204, "name": "World War I", "tag": "world_war_1"},
                 {"id": 205, "name": "World War II", "tag": "world_war_2"},
                 {"id": 206, "name": "History of Europe", "tag": "europe"},
-                {"id": 208, "name": "History of USA", "tag": "usa"},
+                {"id": 208, "name": "History of USA", "tag": "usa", "category": "history"},
                 {"id": 209, "name": "Famous Rulers", "tag": "kings"},
                 {"id": 210, "name": "Vikings", "tag": "vikings"}
             ]
