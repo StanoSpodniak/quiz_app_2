@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import './EndGame.css';
+//Should implement sumary of questions correct answers and user answers
 
 const EndGame = () => {
     const quizData = useParams();

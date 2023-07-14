@@ -12,16 +12,19 @@ const SearchResult = ( {searchTerm} ) => {
 
     useEffect(() => {
         setCategoryFound(false);
+        setQuizFound(false);
         getSearchResult();
+
     }, [searchTerm]);
 
     const getSearchResult = () => {
         let searchResult = [];
         let foundQuiz = [];
 
+
         quizCategories.categories.categories.map((category) => {
             let displayedCategory = {};
-            
+
             if(category.nameCapitalized.includes(searchTerm.toUpperCase())) {
                 setFoundCategory(category);
                 setCategoryFound(true);
@@ -32,8 +35,9 @@ const SearchResult = ( {searchTerm} ) => {
                 if(quiz.name.toLowerCase().includes(searchTerm.toLowerCase())) {
                     if (category !== displayedCategory) {
                         setQuizFound(true);
-
-                        searchResult.push(category);
+                        if(!searchResult.includes(category)){
+                            searchResult.push(category);
+                        }
                         foundQuiz.push(quiz);
                     }
                 }
@@ -42,8 +46,6 @@ const SearchResult = ( {searchTerm} ) => {
 
         setQuizFoundCategory(searchResult);
         setFoundQuizzes(foundQuiz);
-
-        //check if no category and quiz is found - if not add announcement; add boolean emptySearchResult
     }
 
     return (
@@ -72,16 +74,23 @@ const SearchResult = ( {searchTerm} ) => {
                                         <h2 style={{color: `${category.color}`}} >{category.nameCapitalized}</h2>
                                     </div>
                                 </div>
+                                <div className="quizzes" style={{justifyContent: "start"}}>
                                 {foundQuizzes.map(quiz => {
                                     if(quiz.category === category.name) {
                                         return (
-                                            <div key={quiz.id} className="quizzes">
-                                                <a href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
-                                            </div>)
+                                            <a href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
+                                        )
                                     }
                                 })}
+                                </div>
                             </div>)
                     })}
+                </div>
+            }
+
+            {!categoryFound && !quizFound &&
+                <div className="noResult">
+                    <h2>There is no result for your querry "{searchTerm}"</h2>
                 </div>
             }
         </div>

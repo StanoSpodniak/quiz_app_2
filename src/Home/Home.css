@@ -92,6 +92,12 @@
     background-color: #F0F8FF;
 }
 
+.noResult {
+    margin: 60px 0;
+    text-align: center;
+    color: grey;
+}
+
 @media screen and (max-width: 1200px) {
     .quiz-categories {
         width: 60%;
