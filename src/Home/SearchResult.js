@@ -7,33 +7,43 @@ const SearchResult = ( {searchTerm} ) => {
     const [foundCategory, setFoundCategory] = useState({});   
 
     const [quizFound, setQuizFound] = useState(false);
-    const [foundQuiz, setFoundQuiz] = useState({});
-    const [quizFoundCategory, setQuizFoundCategory] = useState({});
+    const [foundQuizzes, setFoundQuizzes] = useState({});
+    const [quizFoundCategory, setQuizFoundCategory] = useState([]);
 
     useEffect(() => {
+        setCategoryFound(false);
         getSearchResult();
     }, [searchTerm]);
 
     const getSearchResult = () => {
+        let searchResult = [];
+        let foundQuiz = [];
+
         quizCategories.categories.categories.map((category) => {
-            let searchedCategory = "";
+            let displayedCategory = {};
             
             if(category.nameCapitalized.includes(searchTerm.toUpperCase())) {
                 setFoundCategory(category);
                 setCategoryFound(true);
-                searchedCategory = category;
+                displayedCategory = category;
             }
 
             category.quizzes.map((quiz) => {
                 if(quiz.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-                    if (category !== searchedCategory) {
+                    if (category !== displayedCategory) {
                         setQuizFound(true);
-                        setQuizFoundCategory(category);
-                        setFoundQuiz(quiz);
+
+                        searchResult.push(category);
+                        foundQuiz.push(quiz);
                     }
                 }
             })
         })  
+
+        setQuizFoundCategory(searchResult);
+        setFoundQuizzes(foundQuiz);
+
+        //check if no category and quiz is found - if not add announcement; add boolean emptySearchResult
     }
 
     return (
@@ -51,16 +61,29 @@ const SearchResult = ( {searchTerm} ) => {
                     </div>
                 </div>}         
 
-            {quizFound && 
-                <div key={quizFoundCategory.id} >
-                    <div className="category" style={{backgroundColor: `${quizFoundCategory.backgroundColor}`}}>
-                        <img src={`icons/${quizFoundCategory.name}.png`} alt={`${quizFoundCategory.name} icon`} />
-                        <h2 style={{color: `${quizFoundCategory.color}`}} >{quizFoundCategory.nameCapitalized}</h2>
-                    </div>
-                    <div className="quizzes">
-                        <a key={foundQuiz.id} href={`/quiz/${quizFoundCategory.name}/${foundQuiz.name}/${foundQuiz.tag}`}><button>{foundQuiz.name}</button></a>
-                    </div>
-                </div>}
+            {quizFound &&
+                <div>
+                    {quizFoundCategory.map((category) => {
+                        return (
+                            <div key={category.id}> 
+                                <div>
+                                    <div className="category" style={{backgroundColor: `${category.backgroundColor}`}}>
+                                        <img src={`icons/${category.name}.png`} alt={`${category.name} icon`} />
+                                        <h2 style={{color: `${category.color}`}} >{category.nameCapitalized}</h2>
+                                    </div>
+                                </div>
+                                {foundQuizzes.map(quiz => {
+                                    if(quiz.category === category.name) {
+                                        return (
+                                            <div key={quiz.id} className="quizzes">
+                                                <a href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
+                                            </div>)
+                                    }
+                                })}
+                            </div>)
+                    })}
+                </div>
+            }
         </div>
     );
 }

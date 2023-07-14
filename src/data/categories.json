@@ -9,8 +9,8 @@
             "quizzes": [
                 {"id": 101, "name": "Geography General", "tag": "none", "category": "geography"},
                 {"id": 102, "name": "Asia", "tag": "asia", "category": "geography"},
-                {"id": 103, "name": "Africa", "tag": "africa"},
-                {"id": 104, "name": "Europe", "tag": "europe"},
+                {"id": 103, "name": "Africa", "tag": "africa", "category": "geography"},
+                {"id": 104, "name": "Europe", "tag": "europe", "category": "geography"},
                 {"id": 105, "name": "South America", "tag": "south_america"},
                 {"id": 106, "name": "Australia", "tag": "australia"},
                 {"id": 107, "name": "Seas & Oceans", "tag": "ocean,oceans,sea,seas"},
@@ -39,7 +39,7 @@
                 {"id": 304, "name": "Biology", "tag": "biology"},
                 {"id": 305, "name": "Astronomy", "tag": "astronomy"},
                 {"id": 306, "name": "Chemistry", "tag": "chemistry"},
-                {"id": 307, "name": "Geology", "tag": "geology"},
+                {"id": 307, "name": "Geology", "tag": "geology", "category": "science"},
                 {"id": 308, "name": "Animals", "tag": "animals"},
                 {"id": 309, "name": "Dinosaurs", "tag": "dinosaurs,dinosaur"},
                 {"id": 310, "name": "Technology", "tag": "technology"},
@@ -57,7 +57,7 @@
                 {"id": 202, "name": "Middle Ages", "tag": "middle_ages"},
                 {"id": 204, "name": "World War I", "tag": "world_war_1"},
                 {"id": 205, "name": "World War II", "tag": "world_war_2"},
-                {"id": 206, "name": "History of Europe", "tag": "europe"},
+                {"id": 206, "name": "History of Europe", "tag": "europe", "category": "history"},
                 {"id": 208, "name": "History of USA", "tag": "usa", "category": "history"},
                 {"id": 209, "name": "Famous Rulers", "tag": "kings"},
                 {"id": 210, "name": "Vikings", "tag": "vikings"}

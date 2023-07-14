@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import categories from "../data/categories";
 import SearchResult from './SearchResult';
 import "./Home.css";
+//add category to all json quizzes
 
 const Home = () => {
     const quizCategories = {categories};
