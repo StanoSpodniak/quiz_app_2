@@ -7,14 +7,17 @@ const SearchResult = ( {searchTerm} ) => {
     const [foundCategory, setFoundCategory] = useState({});   
 
     const [quizFound, setQuizFound] = useState(false);
-    const [foundQuiz, setFoundQuiz] = useState([]);
+    const [foundQuiz, setFoundQuiz] = useState({});
 
     useEffect(() => {
         setCategoryFound(false);
         setQuizFound(false);
         isCategory();
         isQuiz();
+        console.log(foundQuiz);
     }, [searchTerm]);
+
+
 
     const isCategory = () => {
         if(searchTerm.length >= 3) {
@@ -28,18 +31,29 @@ const SearchResult = ( {searchTerm} ) => {
     }
 
     const isQuiz = () => {
-        if(searchTerm.length >= 3 && categoryFound === false) {
+        if(searchTerm.length >= 3) {
+            /*let results = quizCategories.categories.categories.map((category) => {
+                return category.quizzes.filter((quiz) => quiz.name.toLowerCase().includes(searchTerm.toLowerCase()));
+            })
+            results = results.filter((quiz) => quiz.length > 0);
+            
+            if (results.length > 0) {
+                setFoundQuiz(results.map(result => result));
+                setQuizFound(true);
+            } else {
+                setQuizFound(false);
+            }*/
+            
             quizCategories.categories.categories.map((category) => {
-                //push found categories to array, then filter quizzes which belong to this categories
                 let currentCategory = category;
                 category.quizzes.map((quiz) => {
-                    //maybe filter results here as in Home.js
                     if(quiz.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                        setFoundCategory(currentCategory);
                         setQuizFound(true);
                         setFoundQuiz(quiz);
                     }
                 })
-            })     
+            })   
         }
     }
 
@@ -59,13 +73,15 @@ const SearchResult = ( {searchTerm} ) => {
                 </div>
             )}
 
-            {quizFound ? (
+            {quizFound && (
                 <div>
-                    <p>{foundQuiz.name}</p>
-                </div>
-            ) : (
-                <div>
-                    <p>No search result</p>
+                    <div className="category" key={foundCategory.id} style={{backgroundColor: `${foundCategory.backgroundColor}`}}>
+                        <img src={`icons/${foundCategory.name}.png`} alt={`${foundCategory.name} icon`} />
+                        <h2 style={{color: `${foundCategory.color}`}} >{foundCategory.nameCapitalized}</h2>
+                    </div>
+                    <div className="quizzes">
+                        <a key={foundQuiz.id} href={`/quiz/${foundCategory.name}/${foundQuiz.name}/${foundQuiz.tag}`}><button>{foundQuiz.name}</button></a>
+                    </div>
                 </div>
             )}
         </div>

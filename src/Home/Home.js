@@ -6,57 +6,21 @@ import "./Home.css";
 const Home = () => {
     const quizCategories = {categories};
 
-    const [quizNames, setQuizNames] = useState([]);
-
     const [searchTerm, setSearchTerm] = useState('');
     const [search, setSearch] = useState(false);
-    const [searchResult, setSearchResult] = useState({});
-    
-    useEffect(() => {
-        if (searchResult.length > 0) {
-            setSearch(true);
-        }
-
-    }, [searchResult]);
 
     const handleChange = (event) => {
         setSearchTerm(event.target.value);
+        
+        if(event.target.value.length >= 3) {
+            setSearch(true);
+        } else {
+            setSearch(false);
+        }
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if(searchTerm.length >= 3) {
-            let quizzes =  quizCategories.categories.categories.map((category) => 
-                category.quizzes.map((quiz) => {
-                    return quiz.name;
-                })
-            );
-            setQuizNames(quizzes);
-
-            //first check if category name includes searchTerm, if yes show whole category as a result
-            /*let searhedCategories = quizCategories.categories.categories.map((category) => category);
-            let results = searhedCategories.filter((category) => category.name.includes(searchTerm.toLowerCase()));
-
-            if (results.length > 0) {
-                setSearchResult(results);
-            }*/
-            
-            let results = quizCategories.categories.categories.map((category) => {
-                return category.quizzes.filter((quiz) => quiz.name.includes(searchTerm));
-            })
-            results = results.filter((quiz) => quiz.length > 0);
-            
-            if (results.length > 0) {
-                setSearchResult(results.map(result => result));
-            } else {
-                results[0] = "Sorry, there is no search result for you querry.";
-            }
-
-            setSearch(true);
-
-        } else {
-            setSearch(false);
-        }
       };
 
     return (
@@ -79,24 +43,6 @@ const Home = () => {
             </div>
             <div className="quiz-categories">
                 {search ? (
-                    /* Try to send searchTerm prompt to component to separate file. There check if searchTerm includes any category or quiz */
-                    //<SearchFile search={searchTerm} />
-                    /*quizCategories.categories.categories.map((category) => {
-                        if(category.nameCapitalized.includes(searchTerm.toUpperCase())) {
-                            return (
-                                <div key={category.id}>
-                                    <div className="category" key={category.id} style={{backgroundColor: `${category.backgroundColor}`}}>
-                                        <img src={`icons/${category.name}.png`} alt={`${category.name} icon`} />
-                                        <h2 style={{color: `${category.color}`}} >{category.nameCapitalized}</h2>
-                                    </div>
-                                    <div className="quizzes">
-                                        {category.quizzes.map((quiz) => (
-                                            <a key={quiz.id} href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
-                                        ))}
-                                    </div>
-                                </div>
-                            );
-                        }*/
                     <SearchResult searchTerm={searchTerm} />
                 ) : (
                     quizCategories.categories.categories.map((category) => (   
