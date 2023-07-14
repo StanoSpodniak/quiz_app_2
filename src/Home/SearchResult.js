@@ -8,60 +8,39 @@ const SearchResult = ( {searchTerm} ) => {
 
     const [quizFound, setQuizFound] = useState(false);
     const [foundQuiz, setFoundQuiz] = useState({});
+    const [quizFoundCategory, setQuizFoundCategory] = useState({});
 
     useEffect(() => {
-        setCategoryFound(false);
-        setQuizFound(false);
-        isCategory();
-        isQuiz();
-        console.log(foundQuiz);
+        getSearchResult();
     }, [searchTerm]);
 
-
-
-    const isCategory = () => {
-        if(searchTerm.length >= 3) {
-            quizCategories.categories.categories.map((category) => {
-                if(category.nameCapitalized.includes(searchTerm.toUpperCase())) {
-                    setCategoryFound(true);
-                    setFoundCategory(category);
-                }
-            })
-        }
-    }
-
-    const isQuiz = () => {
-        if(searchTerm.length >= 3) {
-            /*let results = quizCategories.categories.categories.map((category) => {
-                return category.quizzes.filter((quiz) => quiz.name.toLowerCase().includes(searchTerm.toLowerCase()));
-            })
-            results = results.filter((quiz) => quiz.length > 0);
+    const getSearchResult = () => {
+        quizCategories.categories.categories.map((category) => {
+            let searchedCategory = "";
             
-            if (results.length > 0) {
-                setFoundQuiz(results.map(result => result));
-                setQuizFound(true);
-            } else {
-                setQuizFound(false);
-            }*/
-            
-            quizCategories.categories.categories.map((category) => {
-                let currentCategory = category;
-                category.quizzes.map((quiz) => {
-                    if(quiz.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-                        setFoundCategory(currentCategory);
+            if(category.nameCapitalized.includes(searchTerm.toUpperCase())) {
+                setFoundCategory(category);
+                setCategoryFound(true);
+                searchedCategory = category;
+            }
+
+            category.quizzes.map((quiz) => {
+                if(quiz.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                    if (category !== searchedCategory) {
                         setQuizFound(true);
+                        setQuizFoundCategory(category);
                         setFoundQuiz(quiz);
                     }
-                })
-            })   
-        }
+                }
+            })
+        })  
     }
 
     return (
         <div>
-            {categoryFound && (
-                <div>
-                    <div className="category" key={foundCategory.id} style={{backgroundColor: `${foundCategory.backgroundColor}`}}>
+            {categoryFound &&
+                <div key={foundCategory.id}>
+                    <div className="category" style={{backgroundColor: `${foundCategory.backgroundColor}`}}>
                         <img src={`icons/${foundCategory.name}.png`} alt={`${foundCategory.name} icon`} />
                         <h2 style={{color: `${foundCategory.color}`}} >{foundCategory.nameCapitalized}</h2>
                     </div>
@@ -70,20 +49,18 @@ const SearchResult = ( {searchTerm} ) => {
                             <a key={quiz.id} href={`/quiz/${foundCategory.name}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
                         ))}
                     </div>
-                </div>
-            )}
+                </div>}         
 
-            {quizFound && (
-                <div>
-                    <div className="category" key={foundCategory.id} style={{backgroundColor: `${foundCategory.backgroundColor}`}}>
-                        <img src={`icons/${foundCategory.name}.png`} alt={`${foundCategory.name} icon`} />
-                        <h2 style={{color: `${foundCategory.color}`}} >{foundCategory.nameCapitalized}</h2>
+            {quizFound && 
+                <div key={quizFoundCategory.id} >
+                    <div className="category" style={{backgroundColor: `${quizFoundCategory.backgroundColor}`}}>
+                        <img src={`icons/${quizFoundCategory.name}.png`} alt={`${quizFoundCategory.name} icon`} />
+                        <h2 style={{color: `${quizFoundCategory.color}`}} >{quizFoundCategory.nameCapitalized}</h2>
                     </div>
                     <div className="quizzes">
-                        <a key={foundQuiz.id} href={`/quiz/${foundCategory.name}/${foundQuiz.name}/${foundQuiz.tag}`}><button>{foundQuiz.name}</button></a>
+                        <a key={foundQuiz.id} href={`/quiz/${quizFoundCategory.name}/${foundQuiz.name}/${foundQuiz.tag}`}><button>{foundQuiz.name}</button></a>
                     </div>
-                </div>
-            )}
+                </div>}
         </div>
     );
 }
