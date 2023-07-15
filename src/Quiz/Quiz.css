@@ -1,16 +1,13 @@
-/* quiz */
 .quiz-container {
-  position: relative;
-  max-width: 1040px;
   margin: 0 auto;
+  width: 60%;
 }
 
 .quiz-header {
   margin: 20px 0;
-  border: 2px solid #DCDCDC;
-  border-radius: 10px;
-  background-color: #DCDCDC;
-  color: black;
+  border-radius: 20px;
+  background-color: #396a93;
+  color: white;
 }
 
 #category-name {
@@ -35,14 +32,14 @@ h2 {
 }
 
 #question-text {
-  font-size: 2em;
+  font-size: 1.75em;
   text-align: center;
 }
 
 .choices {
   display: grid;
   margin: 40px auto;
-  width: 640px;
+  width: 60%;
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
   justify-items: center;
@@ -50,10 +47,10 @@ h2 {
 
 .choices button {
   height: 90px;
-  width: 325px;
+  width: 100%;
   padding: 5px;
   font-size: 1.3em;
-  border: 2px solid gray;
+  border: 2px solid #ADD8E6;
   border-radius: 10px;
   color: black;
 }
@@ -62,7 +59,30 @@ h2 {
   color: black;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1500px) {
+  #question-text {
+    font-size: 1.5em;
+  }
+  
+  .choices {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #category-name {
+    padding: 20px 0;
+    font-size: 1.5em;
+  }
+  
+  h2 {
+    font-size: 1.1em;
+  }
+
+  .quiz-info {
+    padding: 0 20px 10px 20px;
+  }
+
   #question-text {
     font-size: 1.5em;
   }
@@ -75,8 +95,8 @@ h2 {
   }
 
   .choices button {
-    height: 75px;
-    width: 325px;
+    height: 60px;
+    width: 275px;
     font-size: 1.2em;
   }
 }

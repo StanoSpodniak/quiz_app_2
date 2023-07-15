@@ -1,7 +1,8 @@
 .header {
-    margin: 0 auto;
-    width: 60%;
-    background-color: gainsboro;
+    margin: 20px auto;
+    width: 100%;
+    background-color: #396a93;
+    color: white;
 }
 
 .search-container {

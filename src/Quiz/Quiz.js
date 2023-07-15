@@ -5,6 +5,7 @@ import './Quiz.css';
 //https://the-trivia-api.com/docs/v2/#tag/Questions/operation/getRandomQuestionshttps://the-trivia-api.com/docs/v2/#tag/Questions/operation/getRandomQuestions
 //help@the-trivia-api.com
 //use icons from https://www.flaticon.com/search?word=history on homepage
+//https://wikitrivia.tomjwatson.com/
 
 //make imageQuiz file and functionality
 
@@ -18,7 +19,7 @@ const Quiz = () => {
             { id: 2 },
             { id: 3 }
     ];
-    const color = {neutral: "white", correct: "#6BCD6F", incorrect: "#CD6F6B", hover: "#F5F5F5"};
+    const color = {neutral: "white", correct: "#6BCD6F", incorrect: "#CD6F6B", hover: "#F0F8FF"};
 
     const [question, setQuestion] = useState('');
     const [choices, setChoices] = useState([]);
@@ -126,7 +127,7 @@ const Quiz = () => {
         buttons.map((button) => {
             button.style.backgroundColor = color.neutral;
             button.style.color = "black";
-            button.style.border = "2px solid grey";
+            button.style.border = "2px solid #ADD8E6";
         })
     }
 

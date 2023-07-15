@@ -1,45 +1,97 @@
 .endGame-panel {
-    width: 100%;
-    height: 600px;
-    background-color: white;
-    text-align: center;
-  }
+  width: 100%;
+  height: 600px;
+  background-color: white;
+  text-align: center;
+}
 
-  .endGame-panel h2, h3 {
-    margin: 40px auto;
-    font-size: 1.5em;
-  }
+.announcement {
+  margin: 20px auto;
+  width: 60%;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #396a93;
+}
 
+.announcement h2, h3 {
+  margin: 40px auto;
+  font-size: 1.6em;
+  color: white;
+}
+
+.announcement button {
+  height: 60px;
+  width: 250px;
+  border-radius: 20px;
+  background-color: white;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+.announcement button:hover {
+  cursor: pointer;
+  background-color: #F0F8FF;
+}
+
+.game-review {
+  width: 50%;
+  margin: 40px auto;
+  font-size: 1.2em;
+  border: 2px solid #396a93;
+  border-radius: 20px;
+  border-spacing: 20px;
+}
+
+.answer {
+  font-weight: 600;
+}
+
+.endGame-buttons {
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+
+.endGame-buttons button {
+  height: 60px;
+  width: 250px;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+#play-again-button {
+  background-color: #32CD32;
+}
+
+#home-button {
+  background-color: #FF6347;
+}
+
+#play-again-button:hover {
+  cursor: pointer;
+  background-color: #6BCD6F;
+}
+
+#home-button:hover {
+  cursor: pointer;
+  background-color: #FA8072;
+}
+
+@media only screen and (max-width: 800px) {
+  .game-review {
+    width: 90%;
+    border-spacing: 10px;
+    font-size: 1em;
+  }
+  
   .endGame-buttons {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    width: 800px;
+    display: block;
   }
 
   .endGame-buttons button {
-    height: 75px;
-    width: 275px;
-    border-radius: 10px;
-    color: white;
-    font-size: 1.8em;
-    padding: 5px;
+    margin-bottom: 40px;
   }
-
-  #play-again-button {
-    background-color: #32CD32;
-  }
-
-  #home-button {
-    background-color: #FF6347;
-  }
-
-  #play-again-button:hover {
-    cursor: pointer;
-    background-color: #6BCD6F;
-  }
-
-  #home-button:hover {
-    cursor: pointer;
-    background-color: #FA8072;
-  }
+}

@@ -4,7 +4,7 @@
     align-items: center;
     max-width: 60%;
     margin: 0 auto;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid #396a93;
   }
   
   .navbar h1 {
@@ -22,7 +22,7 @@
     padding-right: 40px;
     font-weight: 600;
     text-decoration: none;
-    color: black;
+    color: #396a93;
   }
   
   .link:hover {

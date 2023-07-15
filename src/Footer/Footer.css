@@ -1,0 +1,14 @@
+/* make dynamic footer property based on url with javascript */
+
+.footer {
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+    border-top: 1px solid #ADD8E6;
+}
+
+.footer p {
+    color: #396a93;
+    font-size: 1em;
+    padding: 20px 0;
+}
