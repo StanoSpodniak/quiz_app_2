@@ -44,7 +44,8 @@
                 {"id": 308, "name": "Animals", "tag": "animals", "category": "science"},
                 {"id": 309, "name": "Dinosaurs", "tag": "dinosaurs,dinosaur", "category": "science"},
                 {"id": 310, "name": "Technology", "tag": "technology", "category": "science"},
-                {"id": 311, "name": "Math", "tag": "mathematics", "category": "science"}
+                {"id": 311, "name": "Math", "tag": "mathematics", "category": "science"},
+                {"id": 312, "name": "Planets", "tag": "planets", "category": "science"}
             ]
         },
         {
@@ -55,14 +56,15 @@
             "color": "white",
             "quizzes": [
                 {"id": 201, "name": "History General", "tag": "none", "category": "history"},
-                {"id": 202, "name": "Middle Ages", "tag": "middle_ages", "category": "history"},
+                {"id": 202, "name": "Middle Ages", "tag": "middle_ages,medieval", "category": "history"},
                 {"id": 204, "name": "World War I", "tag": "world_war_1", "category": "history"},
                 {"id": 205, "name": "World War II", "tag": "world_war_2", "category": "history"},
                 {"id": 206, "name": "History of Europe", "tag": "europe", "category": "history"},
                 {"id": 208, "name": "History of USA", "tag": "usa", "category": "history"},
-                {"id": 209, "name": "Famous Rulers", "tag": "kings", "category": "history"},
+                {"id": 209, "name": "Famous Rulers", "tag": "kings,monarchs,emperors", "category": "history"},
                 {"id": 210, "name": "Vikings", "tag": "vikings", "category": "history"},
-                {"id": 211, "name": "History of Japan", "tag": "japan", "category": "history"}
+                {"id": 211, "name": "History of Japan", "tag": "japan", "category": "history"},
+                {"id": 212, "name": "Wars", "tag": "wars", "category": "history"}
             ]
         },
         {
@@ -133,7 +135,8 @@
                 {"id": 708, "name": "Star Wars", "tag": "star_wars", "category": "miscelenious"},
                 {"id": 709, "name": "Star Trek", "tag": "star_trek", "category": "miscelenious"},
                 {"id": 710, "name": "Comics", "tag": "comics", "category": "miscelenious"},
-                {"id": 711, "name": "PC Games", "tag": "pc_games,video_games", "category": "miscelenious"}
+                {"id": 711, "name": "PC Games", "tag": "pc_games,video_games", "category": "miscelenious"},
+                {"id": 712, "name": "Aviation", "tag": "aviation", "category": "miscelenious"}
             ]
         }
     ]

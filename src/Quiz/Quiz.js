@@ -10,7 +10,7 @@ import './Quiz.css';
 
 const Quiz = () => {
     const quizParams = useParams();
-    const {data, error, isPending} = useFetchQuizData(quizParams);
+    const {data} = useFetchQuizData(quizParams);
     
     const buttons = [
             { id: 0 },
@@ -30,6 +30,7 @@ const Quiz = () => {
     const [score, setScore] = useState(0);
     const [addScore, setAddScore] = useState(false);
     const [isAnswered, setIsAnswered] = useState(false);
+    const [userAnswers, setUserAnswers] = useState([]);
 
     const navigate = useNavigate();
     const [gameEnded, setGameEnded] = useState(false);
@@ -50,6 +51,8 @@ const Quiz = () => {
 
     useEffect(() => {
         if(gameEnded) {
+            localStorage.setItem('userAnswers', JSON.stringify(userAnswers));
+            localStorage.setItem('data', JSON.stringify(data));
             navigate(`./endGame/${score}/${questionCount}`);
         }
     }, [gameEnded]);
@@ -75,6 +78,7 @@ const Quiz = () => {
 
     function handleAnswer(event) {
         const userAnswer = event.target.innerText;
+        setUserAnswers([...userAnswers, userAnswer]);
         const correctAnswer = data[questionCount - 1].correctAnswer;
 
         let options = buttonEls.current;

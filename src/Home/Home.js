@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import categories from "../data/categories";
 import SearchResult from './SearchResult';
 import "./Home.css";
@@ -12,7 +12,7 @@ const Home = () => {
     const handleChange = (event) => {
         setSearchTerm(event.target.value);
         
-        if(event.target.value.length >= 3) {
+        if(event.target.value.length >= 2) {
             setSearch(true);
         } else {
             setSearch(false);

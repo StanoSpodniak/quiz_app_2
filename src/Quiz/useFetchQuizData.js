@@ -9,7 +9,7 @@ const useFetchQuizData = (quizParams) => {
     const [error, setError] = useState(null);
 
     const removeCategoryTag = ["music", "film", "tv", "food", "philosophy", "politics", "psychology", "religion", "law", "words", "chess", "harry_potter", "star_wars", "star_trek", "comics",
-"pc_games", "video_games"];
+"pc_games", "video_games", "aviation"];
 
     useEffect(() => {
         let urlStr = baseUrl;

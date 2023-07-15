@@ -21,7 +21,6 @@ const SearchResult = ( {searchTerm} ) => {
         let searchResult = [];
         let foundQuiz = [];
 
-
         quizCategories.categories.categories.map((category) => {
             let displayedCategory = {};
 
