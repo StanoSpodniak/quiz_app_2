@@ -2,7 +2,7 @@
 .navbar {
     display: flex;
     align-items: center;
-    max-width: 60%;
+    width: 60%;
     margin: 0 auto;
     border-bottom: 1px solid #396a93;
   }

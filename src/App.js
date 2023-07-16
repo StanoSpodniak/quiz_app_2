@@ -1,7 +1,7 @@
 import Home from './Home/Home';
 import NavBar from './NavBar/NavBar';
 import Quiz from './Quiz/Quiz';
-import EndGame from './Quiz/EndGame/EndGame';
+import EndGame from './EndGame/EndGame';
 import Footer from './Footer/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 

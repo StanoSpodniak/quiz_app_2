@@ -1,7 +1,7 @@
 /* make dynamic footer property based on url with javascript */
 
 .footer {
-    margin: 0 auto;
+    margin: auto auto 0 auto;
     width: 60%;
     text-align: center;
     border-top: 1px solid #ADD8E6;
