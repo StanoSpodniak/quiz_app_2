@@ -34,11 +34,8 @@
 }
 
 .game-review {
-  width: 50%;
   margin: 40px auto;
-}
-
-.game-review table {
+  width: 50%;
   font-size: 1.2em;
   border: 2px solid #396a93;
   border-radius: 20px;
@@ -49,8 +46,14 @@
   font-weight: 600;
 }
 
+.horizontal-line {
+  margin: 0 auto;
+  width: 90%;
+  border-bottom: 1px solid #DCDCDC;
+}
+
 .endGame-buttons {
-  margin: 40px auto;
+  margin: 40px auto 80px auto;
   display: flex;
   justify-content: space-around;
   width: 60%;

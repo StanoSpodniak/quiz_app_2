@@ -8,14 +8,21 @@ const useFetchQuizData = (quizParams) => {
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
 
-    const removeCategoryTag = ["music", "film", "tv", "food", "philosophy", "politics", "psychology", "religion", "law", "words", "chess", "harry_potter", "star_wars", "star_trek", "comics",
-"pc_games", "video_games", "aviation"];
+    /*const removeCategoryTag = ["music", "film", "tv", "food", "philosophy", "politics", "psychology", "religion", "law", "words", "chess", "harry_potter", "star_wars", "star_trek", "comics",
+"pc_games", "video_games", "aviation"];*/
+    const removeCategoryID = ["407", "408", "409", "410", "701", "702", "703", "704", "705", "706", "707", "708", "709", "710", "711", "712"];
 
     useEffect(() => {
+        console.log(quizParams.id);
+        console.log(removeCategoryID);
         let urlStr = baseUrl;
         let params = `?limit=10&categories=${quizParams.category}`;
 
-        if(removeCategoryTag.includes(quizParams.tag)) {
+        /*if(removeCategoryTag.includes(quizParams.tag)) {
+            params = "?limit=10";
+        }*/
+
+        if(removeCategoryID.includes(quizParams.id)) {
             params = "?limit=10";
         }
 

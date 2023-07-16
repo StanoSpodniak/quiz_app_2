@@ -24,7 +24,8 @@
                 {"id": 115, "name": "Germany", "tag": "germany", "category": "geography"},
                 {"id": 116, "name": "United Kingdom", "tag": "uk,great_britain,england,scotland,wales", "category": "geography"},
                 {"id": 117, "name": "Russia", "tag": "russia", "category": "geography"},
-                {"id": 118, "name": "Japan", "tag": "japan", "category": "geography"}
+                {"id": 118, "name": "Japan", "tag": "japan", "category": "geography"},
+                {"id": 119, "name": "Spain", "tag": "spain", "category": "geography"}
             ]
         },
         {
@@ -70,7 +71,7 @@
         {
             "id": 4,
             "name": "arts",
-            "nameCapitalized": "ARTS",
+            "nameCapitalized": "ARTS & ENTERTAIMENT",
             "backgroundColor": "#BA55D3",
             "color": "white",
             "quizzes": [
@@ -79,7 +80,11 @@
                 {"id": 403, "name": "Literature", "tag": "literature", "category": "arts"},
                 {"id": 404, "name": "Painting", "tag": "painting", "category": "arts"},
                 {"id": 405, "name": "Film", "tag": "film", "category": "arts"},
-                {"id": 406, "name": "Architecture", "tag": "architecture", "category": "arts"}
+                {"id": 406, "name": "Architecture", "tag": "architecture", "category": "arts"},
+                {"id": 407, "name": "TV", "tag": "tv", "category": "arts"},
+                {"id": 408, "name": "Harry Potter", "tag": "harry_potter", "category": "arts"},
+                {"id": 409, "name": "Star Wars", "tag": "star_wars", "category": "arts"},
+                {"id": 410, "name": "Star Trek", "tag": "star_trek", "category": "arts"}
             ]
         },
         {
@@ -106,7 +111,7 @@
             "id": 6,
             "name": "sport_and_leisure",
             "nameCapitalized": "SPORTS",
-            "backgroundColor": "#ff3333",
+            "backgroundColor": "#e73232",
             "color": "white",
             "quizzes": [
                 {"id": 601, "name": "Sports General", "tag": "sport", "category": "sport_and_leisure"},
@@ -121,22 +126,39 @@
         },
         {
             "id": 7,
-            "name": "miscelenious",
-            "nameCapitalized": "MISCELENIOUS",
-            "backgroundColor": "#BDB76B",
+            "name": "countries",
+            "nameCapitalized": "COUNTRIES OF THE WORLD",
+            "backgroundColor": "#008B8B",
             "color": "white",
             "quizzes": [
-                {"id": 701, "name": "General Knowledge", "tag": "general_knowledge", "category": "miscelenious"},
-                {"id": 702, "name": "Word Meanings", "tag": "words", "category": "miscelenious"},
-                {"id": 704, "name": "TV", "tag": "tv", "category": "miscelenious"},
-                {"id": 705, "name": "Cuisine", "tag": "food", "category": "miscelenious"},
-                {"id": 706, "name": "Chess", "tag": "chess", "category": "miscelenious"},
-                {"id": 707, "name": "Harry Potter", "tag": "harry_potter", "category": "miscelenious"},
-                {"id": 708, "name": "Star Wars", "tag": "star_wars", "category": "miscelenious"},
-                {"id": 709, "name": "Star Trek", "tag": "star_trek", "category": "miscelenious"},
-                {"id": 710, "name": "Comics", "tag": "comics", "category": "miscelenious"},
-                {"id": 711, "name": "PC Games", "tag": "pc_games,video_games", "category": "miscelenious"},
-                {"id": 712, "name": "Aviation", "tag": "aviation", "category": "miscelenious"}
+                {"id": 701, "name": "USA", "tag": "usa", "category": "countries"},
+                {"id": 702, "name": "China", "tag": "china", "category": "countries"},
+                {"id": 703, "name": "India", "tag": "india", "category": "countries"},
+                {"id": 704, "name": "United Kingdom", "tag": "uk,great_britain,england,scotland,wales", "category": "countries"},
+                {"id": 705, "name": "France", "tag": "france", "category": "countries"},
+                {"id": 706, "name": "Germany", "tag": "germany", "category": "countries"},
+                {"id": 707, "name": "Italy", "tag": "italy", "category": "countries"},
+                {"id": 708, "name": "Spain", "tag": "spain", "category": "countries"},
+                {"id": 709, "name": "Australia", "tag": "australia", "category": "countries"},
+                {"id": 710, "name": "Russia", "tag": "russia", "category": "countries"},
+                {"id": 711, "name": "Mexico", "tag": "mexico", "category": "countries"},
+                {"id": 712, "name": "Canada", "tag": "canada", "category": "countries"}
+            ]
+        },
+        {
+            "id": 8,
+            "name": "miscelenious",
+            "nameCapitalized": "MISCELENIOUS",
+            "backgroundColor": "#DAA520",
+            "color": "white",
+            "quizzes": [
+                {"id": 801, "name": "General Knowledge", "tag": "general_knowledge", "category": "miscelenious"},
+                {"id": 802, "name": "Word Meanings", "tag": "words", "category": "miscelenious"},
+                {"id": 804, "name": "Cuisine", "tag": "food", "category": "miscelenious"},
+                {"id": 805, "name": "Chess", "tag": "chess", "category": "miscelenious"},
+                {"id": 809, "name": "Comics", "tag": "comics", "category": "miscelenious"},
+                {"id": 810, "name": "PC Games", "tag": "pc_games,video_games", "category": "miscelenious"},
+                {"id": 811, "name": "Aviation", "tag": "aviation", "category": "miscelenious"}
             ]
         }
     ]

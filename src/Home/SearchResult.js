@@ -77,7 +77,7 @@ const SearchResult = ( {searchTerm} ) => {
                                 {foundQuizzes.map(quiz => {
                                     if(quiz.category === category.name) {
                                         return (
-                                            <a href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
+                                            <a href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}/${quiz.id}`}><button>{quiz.name}</button></a>
                                         )
                                     }
                                 })}

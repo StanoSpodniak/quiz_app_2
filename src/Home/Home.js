@@ -53,7 +53,7 @@ const Home = () => {
                             </div>
                             <div className="quizzes">
                                 {category.quizzes.map((quiz) => (
-                                    <a key={quiz.id} href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}`}><button>{quiz.name}</button></a>
+                                    <a key={quiz.id} href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}/${quiz.id}`}><button>{quiz.name}</button></a>
                                 ))}
                             </div>
                         </div>
@@ -67,7 +67,8 @@ const Home = () => {
                 <a href="https://www.flaticon.com/free-icons/general" title="general icons">General icons created by Vectors Tank - Flaticon</a>
                 <a href="https://www.flaticon.com/free-icons/political" title="political icons">Political icons created by Freepik - Flaticon</a>
                 <a href="https://www.flaticon.com/free-icons/magnifying-glass" title="magnifying glass icons">Magnifying glass icons created by Anggara - Flaticon</a>
-                <a href="https://www.flaticon.com/free-icons/sports" title="sports icons">Sports icons created by Icongeek26 - Flaticon</a>*/
+                <a href="https://www.flaticon.com/free-icons/sports" title="sports icons">Sports icons created by Icongeek26 - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/countries" title="countries icons">Countries icons created by Iconjam - Flaticon</a>*/
                 }
             </div>
         </div>
