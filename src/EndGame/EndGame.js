@@ -2,6 +2,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './EndGame.css';
 
+//after game show stats - percentil of better players, and how many time the quiz was played
+
 const EndGame = () => {
     const quizData = useParams();
     const navigate = useNavigate();

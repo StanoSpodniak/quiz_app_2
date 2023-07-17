@@ -13,8 +13,8 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/quiz/:category/:quizName/:tag/:id" element={<Quiz />} />
-            <Route path="/quiz/:category/:quizName/:tag/:id/endGame/:score/:questionCount" element={<EndGame />} />
+            <Route path="/quiz/:category/:quizName/:tag/:id/:section" element={<Quiz />} />
+            <Route path="/quiz/:category/:quizName/:tag/:id/:section/endGame/:score/:questionCount" element={<EndGame />} />
           </Routes>
         </div>
         <Footer />

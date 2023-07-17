@@ -7,25 +7,25 @@
             "backgroundColor": "cornflowerblue",
             "color": "white",
             "quizzes": [
-                {"id": 101, "name": "Geography General", "tag": "none", "category": "geography"},
-                {"id": 102, "name": "Asia", "tag": "asia", "category": "geography"},
-                {"id": 103, "name": "Africa", "tag": "africa", "category": "geography"},
-                {"id": 104, "name": "Europe", "tag": "europe", "category": "geography"},
-                {"id": 105, "name": "South America", "tag": "south_america", "category": "geography"},
-                {"id": 106, "name": "Australia", "tag": "australia", "category": "geography"},
-                {"id": 107, "name": "Seas & Oceans", "tag": "ocean,oceans,sea,seas", "category": "geography"},
-                {"id": 108, "name": "Capital Cities", "tag": "capital_cities", "category": "geography"},
-                {"id": 109, "name": "USA", "tag": "usa", "category": "geography"},
-                {"id": 110, "name": "China", "tag": "china", "category": "geography"},
-                {"id": 111, "name": "India", "tag": "india", "category": "geography"},
-                {"id": 112, "name": "Canada", "tag": "canada", "category": "geography"},
-                {"id": 113, "name": "France", "tag": "france", "category": "geography"},
-                {"id": 114, "name": "Italy", "tag": "italy", "category": "geography"},
-                {"id": 115, "name": "Germany", "tag": "germany", "category": "geography"},
-                {"id": 116, "name": "United Kingdom", "tag": "uk,great_britain,england,scotland,wales", "category": "geography"},
-                {"id": 117, "name": "Russia", "tag": "russia", "category": "geography"},
-                {"id": 118, "name": "Japan", "tag": "japan", "category": "geography"},
-                {"id": 119, "name": "Spain", "tag": "spain", "category": "geography"}
+                {"id": 101, "name": "Geography General", "tag": "none", "category": "geography", "section": "Geography"},
+                {"id": 102, "name": "Asia", "tag": "asia", "category": "geography", "section": "Geography"},
+                {"id": 103, "name": "Africa", "tag": "africa", "category": "geography", "section": "Geography"},
+                {"id": 104, "name": "Europe", "tag": "europe", "category": "geography", "section": "Geography"},
+                {"id": 105, "name": "South America", "tag": "south_america", "category": "geography", "section": "Geography"},
+                {"id": 106, "name": "Australia", "tag": "australia", "category": "geography", "section": "Geography"},
+                {"id": 107, "name": "Seas & Oceans", "tag": "ocean,oceans,sea,seas", "category": "geography", "section": "Geography"},
+                {"id": 108, "name": "Capital Cities", "tag": "capital_cities", "category": "geography", "section": "Geography"},
+                {"id": 109, "name": "USA", "tag": "usa", "category": "geography", "section": "Geography"},
+                {"id": 110, "name": "China", "tag": "china", "category": "geography", "section": "Geography"},
+                {"id": 111, "name": "India", "tag": "india", "category": "geography", "section": "Geography"},
+                {"id": 112, "name": "Canada", "tag": "canada", "category": "geography", "section": "Geography"},
+                {"id": 113, "name": "France", "tag": "france", "category": "geography", "section": "Geography"},
+                {"id": 114, "name": "Italy", "tag": "italy", "category": "geography", "section": "Geography"},
+                {"id": 115, "name": "Germany", "tag": "germany", "category": "geography", "section": "geography"},
+                {"id": 116, "name": "United Kingdom", "tag": "uk,great_britain,england,scotland,wales", "category": "geography", "section": "Geography"},
+                {"id": 117, "name": "Russia", "tag": "russia", "category": "geography", "section": "Geography"},
+                {"id": 118, "name": "Japan", "tag": "japan", "category": "geography", "section": "Geography"},
+                {"id": 119, "name": "Spain", "tag": "spain", "category": "geography", "section": "Geography"}
             ]
         },
         {
@@ -35,18 +35,18 @@
             "backgroundColor": "#3CB371",
             "color": "white",
             "quizzes": [
-                {"id": 301, "name": "Nature General", "tag": "nature", "category": "science"},
-                {"id": 302, "name": "Science General", "tag": "none", "category": "science"},
-                {"id": 303, "name": "Physics", "tag": "physics", "category": "science"},
-                {"id": 304, "name": "Biology", "tag": "biology", "category": "science"},
-                {"id": 305, "name": "Astronomy", "tag": "astronomy", "category": "science"},
-                {"id": 306, "name": "Chemistry", "tag": "chemistry", "category": "science"},
-                {"id": 307, "name": "Geology", "tag": "geology", "category": "science"},
-                {"id": 308, "name": "Animals", "tag": "animals", "category": "science"},
-                {"id": 309, "name": "Dinosaurs", "tag": "dinosaurs,dinosaur", "category": "science"},
-                {"id": 310, "name": "Technology", "tag": "technology", "category": "science"},
-                {"id": 311, "name": "Math", "tag": "mathematics", "category": "science"},
-                {"id": 312, "name": "Planets", "tag": "planets", "category": "science"}
+                {"id": 301, "name": "Nature General", "tag": "nature", "category": "science", "section": "Nature & Science"},
+                {"id": 302, "name": "Science General", "tag": "none", "category": "science", "section": "Nature & Science"},
+                {"id": 303, "name": "Physics", "tag": "physics", "category": "science", "section": "Nature & Science"},
+                {"id": 304, "name": "Biology", "tag": "biology", "category": "science", "section": "Nature & Science"},
+                {"id": 305, "name": "Astronomy", "tag": "astronomy", "category": "science", "section": "Nature & Science"},
+                {"id": 306, "name": "Chemistry", "tag": "chemistry", "category": "science", "section": "Nature & Science"},
+                {"id": 307, "name": "Geology", "tag": "geology", "category": "science", "section": "Nature & Science"},
+                {"id": 308, "name": "Animals", "tag": "animals", "category": "science", "section": "Nature & Science"},
+                {"id": 309, "name": "Dinosaurs", "tag": "dinosaurs,dinosaur", "category": "science", "section": "Nature & Science"},
+                {"id": 310, "name": "Technology", "tag": "technology", "category": "science", "section": "Nature & Science"},
+                {"id": 311, "name": "Math", "tag": "mathematics", "category": "science", "section": "Nature & Science"},
+                {"id": 312, "name": "Planets", "tag": "planets", "category": "science", "section": "Nature & Science"}
             ]
         },
         {
@@ -56,16 +56,16 @@
             "backgroundColor": "coral",
             "color": "white",
             "quizzes": [
-                {"id": 201, "name": "History General", "tag": "none", "category": "history"},
-                {"id": 202, "name": "Middle Ages", "tag": "middle_ages,medieval", "category": "history"},
-                {"id": 204, "name": "World War I", "tag": "world_war_1", "category": "history"},
-                {"id": 205, "name": "World War II", "tag": "world_war_2", "category": "history"},
-                {"id": 206, "name": "History of Europe", "tag": "europe", "category": "history"},
-                {"id": 208, "name": "History of USA", "tag": "usa", "category": "history"},
-                {"id": 209, "name": "Famous Rulers", "tag": "kings,monarchs,emperors", "category": "history"},
-                {"id": 210, "name": "Vikings", "tag": "vikings", "category": "history"},
-                {"id": 211, "name": "History of Japan", "tag": "japan", "category": "history"},
-                {"id": 212, "name": "Wars", "tag": "wars", "category": "history"}
+                {"id": 201, "name": "History General", "tag": "none", "category": "history", "section": "History"},
+                {"id": 202, "name": "Middle Ages", "tag": "middle_ages,medieval", "category": "history", "section": "History"},
+                {"id": 204, "name": "World War I", "tag": "world_war_1", "category": "history", "section": "History"},
+                {"id": 205, "name": "World War II", "tag": "world_war_2", "category": "history", "section": "History"},
+                {"id": 206, "name": "History of Europe", "tag": "europe", "category": "history", "section": "History"},
+                {"id": 208, "name": "History of USA", "tag": "usa", "category": "history", "section": "History"},
+                {"id": 209, "name": "Famous Rulers", "tag": "kings,monarchs,emperors", "category": "history", "section": "History"},
+                {"id": 210, "name": "Vikings", "tag": "vikings", "category": "history", "section": "History"},
+                {"id": 211, "name": "History of Japan", "tag": "japan", "category": "history", "section": "History"},
+                {"id": 212, "name": "Wars", "tag": "wars", "category": "history", "section": "History"}
             ]
         },
         {
@@ -75,18 +75,18 @@
             "backgroundColor": "#BA55D3",
             "color": "white",
             "quizzes": [
-                {"id": 401, "name": "Arts General", "tag": "none", "category": "arts"},
-                {"id": 402, "name": "Music", "tag": "music", "category": "arts"},
-                {"id": 403, "name": "Literature", "tag": "literature", "category": "arts"},
-                {"id": 404, "name": "Painting", "tag": "painting", "category": "arts"},
-                {"id": 405, "name": "Film", "tag": "film", "category": "arts"},
-                {"id": 406, "name": "Architecture", "tag": "architecture", "category": "arts"},
-                {"id": 407, "name": "TV", "tag": "tv", "category": "arts"},
-                {"id": 408, "name": "Harry Potter", "tag": "harry_potter", "category": "arts"},
-                {"id": 409, "name": "Star Wars", "tag": "star_wars", "category": "arts"},
-                {"id": 410, "name": "Star Trek", "tag": "star_trek", "category": "arts"},
-                {"id": 411, "name": "Comics", "tag": "comics", "category": "arts"},
-                {"id": 412, "name": "Video Games", "tag": "pc_games,video_games", "category": "arts"}
+                {"id": 401, "name": "Arts General", "tag": "none", "category": "arts", "section": "Arts & Entertaiment"},
+                {"id": 402, "name": "Music", "tag": "music", "category": "arts", "section": "Arts & Entertaiment"},
+                {"id": 403, "name": "Literature", "tag": "literature", "category": "arts", "section": "Arts & Entertaiment"},
+                {"id": 404, "name": "Painting", "tag": "painting", "category": "arts", "section": "Arts & Entertaiment"},
+                {"id": 405, "name": "Film", "tag": "film", "category": "arts", "section": "Arts & Entertaiment"},
+                {"id": 406, "name": "Architecture", "tag": "architecture", "category": "arts", "section": "Arts & Entertaiment"},
+                {"id": 407, "name": "TV", "tag": "tv", "category": "arts", "section": "Arts & Entertaiment"},
+                {"id": 408, "name": "Harry Potter", "tag": "harry_potter", "category": "arts", "section": "Arts & Entertaiment"},
+                {"id": 409, "name": "Star Wars", "tag": "star_wars", "category": "arts", "section": "Arts & Entertaiment"},
+                {"id": 410, "name": "Star Trek", "tag": "star_trek", "category": "arts", "section": "Arts & Entertaiment"},
+                {"id": 411, "name": "Comics", "tag": "comics", "category": "arts", "section": "Arts & Entertaiment"},
+                {"id": 412, "name": "Video Games", "tag": "pc_games,video_games", "category": "arts", "section": "Arts & Entertaiment"}
             ]
         },
         {
@@ -96,17 +96,17 @@
             "backgroundColor": "#4682B4",
             "color": "white",
             "quizzes": [
-                {"id": 501, "name": "Society General", "tag": "none", "category": "society_and_culture"},
-                {"id": 502, "name": "Philosophy", "tag": "philosophy", "category": "society_and_culture"},
-                {"id": 503, "name": "Politics", "tag": "politics", "category": "society_and_culture"},
-                {"id": 504, "name": "Psychology", "tag": "psychology", "category": "society_and_culture"},
-                {"id": 505, "name": "Law", "tag": "law", "category": "society_and_culture"},
-                {"id": 506, "name": "Religion", "tag": "religion", "category": "society_and_culture"},
-                {"id": 507, "name": "Bible & Christianity", "tag": "bible,christianity,jesus", "category": "society_and_culture"},
-                {"id": 508, "name": "Islam", "tag": "islam", "category": "society_and_culture"},
-                {"id": 509, "name": "Hinduism", "tag": "hinduism", "category": "society_and_culture"},
-                {"id": 510, "name": "Judaism", "tag": "judaism", "category": "society_and_culture"},
-                {"id": 511, "name": "USA Society", "tag": "usa", "category": "society_and_culture"}
+                {"id": 501, "name": "Society General", "tag": "none", "category": "society_and_culture", "section": "People & Society"},
+                {"id": 502, "name": "Philosophy", "tag": "philosophy", "category": "society_and_culture", "section": "People & Society"},
+                {"id": 503, "name": "Politics", "tag": "politics", "category": "society_and_culture", "section": "People & Society"},
+                {"id": 504, "name": "Psychology", "tag": "psychology", "category": "society_and_culture", "section": "People & Society"},
+                {"id": 505, "name": "Law", "tag": "law", "category": "society_and_culture", "section": "People & Society"},
+                {"id": 506, "name": "Religion", "tag": "religion", "category": "society_and_culture", "section": "People & Society"},
+                {"id": 507, "name": "Bible & Christianity", "tag": "bible,christianity,jesus", "category": "society_and_culture", "section": "People & Society"},
+                {"id": 508, "name": "Islam", "tag": "islam", "category": "society_and_culture", "section": "People & Society"},
+                {"id": 509, "name": "Hinduism", "tag": "hinduism", "category": "society_and_culture", "section": "People & Society"},
+                {"id": 510, "name": "Judaism", "tag": "judaism", "category": "society_and_culture", "section": "People & Society"},
+                {"id": 511, "name": "USA Society", "tag": "usa", "category": "society_and_culture", "section": "People & Society"}
             ]
         },
         {
@@ -116,14 +116,14 @@
             "backgroundColor": "#e73232",
             "color": "white",
             "quizzes": [
-                {"id": 601, "name": "Sports General", "tag": "sport", "category": "sport_and_leisure"},
-                {"id": 605, "name": "Soccer", "tag": "soccer", "category": "sport_and_leisure"},
-                {"id": 606, "name": "Basketball", "tag": "basketball", "category": "sport_and_leisure"},
-                {"id": 607, "name": "American Football", "tag": "american_football", "category": "sport_and_leisure"},
-                {"id": 608, "name": "Baseball", "tag": "baseball", "category": "sport_and_leisure"},
-                {"id": 609, "name": "Tenis", "tag": "tennis", "category": "sport_and_leisure"},
-                {"id": 610, "name": "Ice Hockey", "tag": "hockey", "category": "sport_and_leisure"},
-                {"id": 611, "name": "Boxing", "tag": "boxing", "category": "sport_and_leisure"}
+                {"id": 601, "name": "Sports General", "tag": "sport", "category": "sport_and_leisure", "section": "Sports"},
+                {"id": 605, "name": "Soccer", "tag": "soccer", "category": "sport_and_leisure", "section": "Sports"},
+                {"id": 606, "name": "Basketball", "tag": "basketball", "category": "sport_and_leisure", "section": "Sports"},
+                {"id": 607, "name": "American Football", "tag": "american_football", "category": "sport_and_leisure", "section": "Sports"},
+                {"id": 608, "name": "Baseball", "tag": "baseball", "category": "sport_and_leisure", "section": "Sports"},
+                {"id": 609, "name": "Tenis", "tag": "tennis", "category": "sport_and_leisure", "section": "Sports"},
+                {"id": 610, "name": "Ice Hockey", "tag": "hockey", "category": "sport_and_leisure", "section": "Sports"},
+                {"id": 611, "name": "Boxing", "tag": "boxing", "category": "sport_and_leisure", "section": "Sports"}
             ]
         },
         {
@@ -133,19 +133,19 @@
             "backgroundColor": "#008B8B",
             "color": "white",
             "quizzes": [
-                {"id": 701, "name": "USA", "tag": "usa", "category": "countries"},
-                {"id": 702, "name": "China", "tag": "china", "category": "countries"},
-                {"id": 703, "name": "India", "tag": "india", "category": "countries"},
-                {"id": 704, "name": "United Kingdom", "tag": "uk,great_britain,england,scotland,wales", "category": "countries"},
-                {"id": 705, "name": "France", "tag": "france", "category": "countries"},
-                {"id": 706, "name": "Germany", "tag": "germany", "category": "countries"},
-                {"id": 707, "name": "Italy", "tag": "italy", "category": "countries"},
-                {"id": 708, "name": "Spain", "tag": "spain", "category": "countries"},
-                {"id": 709, "name": "Australia", "tag": "australia", "category": "countries"},
-                {"id": 710, "name": "Russia", "tag": "russia", "category": "countries"},
-                {"id": 711, "name": "Mexico", "tag": "mexico", "category": "countries"},
-                {"id": 712, "name": "Canada", "tag": "canada", "category": "countries"},
-                {"id": 713, "name": "Japan", "tag": "japan", "category": "countries"}
+                {"id": 701, "name": "USA", "tag": "usa", "category": "countries", "section": "Countries of the World"},
+                {"id": 702, "name": "China", "tag": "china", "category": "countries", "section": "Countries of the World"},
+                {"id": 703, "name": "India", "tag": "india", "category": "countries", "section": "Countries of the World"},
+                {"id": 704, "name": "United Kingdom", "tag": "uk,great_britain,england,scotland,wales", "category": "countries", "section": "Countries of the World"},
+                {"id": 705, "name": "France", "tag": "france", "category": "countries", "section": "Countries of the World"},
+                {"id": 706, "name": "Germany", "tag": "germany", "category": "countries", "section": "Countries of the World"},
+                {"id": 707, "name": "Italy", "tag": "italy", "category": "countries", "section": "Countries of the World"},
+                {"id": 708, "name": "Spain", "tag": "spain", "category": "countries", "section": "Countries of the World"},
+                {"id": 709, "name": "Australia", "tag": "australia", "category": "countries", "section": "Countries of the World"},
+                {"id": 710, "name": "Russia", "tag": "russia", "category": "countries", "section": "Countries of the World"},
+                {"id": 711, "name": "Mexico", "tag": "mexico", "category": "countries", "section": "Countries of the World"},
+                {"id": 712, "name": "Canada", "tag": "canada", "category": "countries", "section": "Countries of the World"},
+                {"id": 713, "name": "Japan", "tag": "japan", "category": "countries", "section": "Countries of the World"}
             ]
         },
         {
@@ -155,11 +155,11 @@
             "backgroundColor": "#DAA520",
             "color": "white",
             "quizzes": [
-                {"id": 801, "name": "General Knowledge", "tag": "general_knowledge", "category": "miscelenious"},
-                {"id": 802, "name": "Word Meanings", "tag": "words", "category": "miscelenious"},
-                {"id": 803, "name": "Cuisine", "tag": "food", "category": "miscelenious"},
-                {"id": 804, "name": "Chess", "tag": "chess", "category": "miscelenious"},
-                {"id": 805, "name": "Aviation", "tag": "aviation", "category": "miscelenious"}
+                {"id": 801, "name": "General Knowledge", "tag": "general_knowledge", "category": "miscelenious", "section": "Miscelenious"},
+                {"id": 802, "name": "Word Meanings", "tag": "words", "category": "miscelenious", "section": "Miscelenious"},
+                {"id": 803, "name": "Cuisine", "tag": "food", "category": "miscelenious", "section": "Miscelenious"},
+                {"id": 804, "name": "Chess", "tag": "chess", "category": "miscelenious", "section": "Miscelenious"},
+                {"id": 805, "name": "Aviation", "tag": "aviation", "category": "miscelenious", "section": "Miscelenious"}
             ]
         }
     ]

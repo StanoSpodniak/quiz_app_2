@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import categories from "../data/categories";
 import SearchResult from './SearchResult';
 import "./Home.css";
 
 const Home = () => {
+    const navigate = useNavigate();
     const quizCategories = {categories};
+    const quizzes = [];
 
     const [searchTerm, setSearchTerm] = useState('');
     const [search, setSearch] = useState(false);
@@ -24,15 +27,21 @@ const Home = () => {
     };
 
     const handleRandom = () => {
-        
+        quizCategories.categories.categories.map((category) => {
+            category.quizzes.map((quiz) => {
+                quizzes.push(quiz);
+            })
+        })
+        let rnd = Math.floor(Math.random() * quizzes.length);
+        console.log(quizzes[rnd]);
+        navigate(`/quiz/${quizzes[rnd].category}/${quizzes[rnd].name}/${quizzes[rnd].tag}/${quizzes[rnd].id}/${quizzes[rnd].section}`);
     }
 
     return (
         <div className="main-container">
             <div className="banner">
                 <h2>Online free quizzes</h2>
-                <h2>Play random quiz</h2>
-                <button className="play-random-button" onClick={handleRandom} >Play Random Quiz</button>
+                <button className="play-random-button" onClick={handleRandom}>Play Random Quiz</button>
             </div>
             <div className="search-container">
                 <form className="search-form" onSubmit={handleSubmit} >
@@ -58,7 +67,7 @@ const Home = () => {
                             </div>
                             <div className="quizzes">
                                 {category.quizzes.map((quiz) => (
-                                    <a key={quiz.id} href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}/${quiz.id}`}><button>{quiz.name}</button></a>
+                                    <a key={quiz.id} href={`/quiz/${category.name}/${quiz.name}/${quiz.tag}/${quiz.id}/${quiz.section}`}><button>{quiz.name}</button></a>
                                 ))}
                             </div>
                         </div>

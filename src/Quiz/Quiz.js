@@ -142,16 +142,18 @@ const Quiz = () => {
 
     return ( 
         <div className="quiz-container">
+            {/* make background color with color of quiz category */}
             <div className="quiz-header">
-                <div className="quiz-info">
-                    {/* Move to center quiz name */}
-                    <h2 className="info">Quiz: <span style={{fontWeight: "400"}}>{quizParams.quizName.toLowerCase()}</span></h2>
-                    <h2 className="info">Category: <span style={{fontWeight: "400"}}>{quizParams.category}</span></h2>
+                <div className="quiz-info-container">
+                    <div className="quiz-info">
+                        <h2 className="info">Category: <span style={{fontWeight: "400"}}>{quizParams.section}</span></h2>
+                    </div>
+                    <div className="quiz-info">
+                        {data && <h2 className="info">Question: <span style={{fontWeight: "400"}}>{questionCount}/{data.length}</span></h2>}
+                        {data && <h2 className="info">Score: <span style={{fontWeight: "400"}}>{score}/{data.length}</span></h2>}
+                    </div>
                 </div>
-                <div className="quiz-info">
-                    {data && <h2 className="info">Question: <span style={{fontWeight: "400"}}>{questionCount}/{data.length}</span></h2>}
-                    {data && <h2 className="info">Score: <span style={{fontWeight: "400"}}>{score}/{data.length}</span></h2>}
-                </div>
+                <h2 id="quiz-name">{quizParams.quizName}</h2>
             </div>
             <div className="quiz">
                 {data ? (
