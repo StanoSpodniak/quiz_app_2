@@ -40,10 +40,8 @@ const Home = () => {
     return (
         <div className="main-container">
             <div className="banner">
-                <h2>Online free quizzes</h2>
+                <h2 id="slogan">Explore, Play, Quiz Away!</h2>
                 <button className="play-random-button" onClick={handleRandom}>Play Random Quiz</button>
-            </div>
-            <div className="search-container">
                 <form className="search-form" onSubmit={handleSubmit} >
                     <input
                         className="search-bar"
@@ -54,6 +52,7 @@ const Home = () => {
                     />
                     <img src="icons/search.png" id="search_icon" alt="search icon" />
                 </form>
+
             </div>
             <div className="quiz-categories">
                 {search ? (
@@ -82,7 +81,8 @@ const Home = () => {
                 <a href="https://www.flaticon.com/free-icons/political" title="political icons">Political icons created by Freepik - Flaticon</a>
                 <a href="https://www.flaticon.com/free-icons/magnifying-glass" title="magnifying glass icons">Magnifying glass icons created by Anggara - Flaticon</a>
                 <a href="https://www.flaticon.com/free-icons/sports" title="sports icons">Sports icons created by Icongeek26 - Flaticon</a>
-                <a href="https://www.flaticon.com/free-icons/countries" title="countries icons">Countries icons created by Iconjam - Flaticon</a>*/
+                <a href="https://www.flaticon.com/free-icons/countries" title="countries icons">Countries icons created by Iconjam - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/quiz" title="quiz icons">Quiz icons created by Freepik - Flaticon</a>*/
                 }
             </div>
         </div>

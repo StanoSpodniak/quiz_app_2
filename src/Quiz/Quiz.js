@@ -142,15 +142,14 @@ const Quiz = () => {
 
     return ( 
         <div className="quiz-container">
-            {/* make background color with color of quiz category */}
             <div className="quiz-header">
                 <div className="quiz-info-container">
                     <div className="quiz-info">
-                        <h2 className="info">Category: <span style={{fontWeight: "400"}}>{quizParams.section}</span></h2>
+                        <p className="info">Category: {quizParams.section}</p>
                     </div>
                     <div className="quiz-info">
-                        {data && <h2 className="info">Question: <span style={{fontWeight: "400"}}>{questionCount}/{data.length}</span></h2>}
-                        {data && <h2 className="info">Score: <span style={{fontWeight: "400"}}>{score}/{data.length}</span></h2>}
+                        {data && <p className="info">Question: {questionCount}/{data.length}</p>}
+                        {data && <p className="info">Score: {score}/{data.length}</p>}
                     </div>
                 </div>
                 <h2 id="quiz-name">{quizParams.quizName}</h2>

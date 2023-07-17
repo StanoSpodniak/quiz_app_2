@@ -1,15 +1,12 @@
 .quiz-container {
   margin: 0 auto;
-  width: 60%;
+  width: 100%;
 }
 
 .quiz-header {
-  margin: 20px 0;
   width: 100%;
   height: 75px;
-  border-radius: 20px;
-  /*background: linear-gradient(to top, #396a93 0%, #ADD8E6 100%);*/
-  background-color: #396a93;
+  background: radial-gradient(circle, rgba(100,149,237,1) -30%, rgba(255,255,255,1) 100%);
   color: white;
   text-align: center;
 }
@@ -17,19 +14,21 @@
 .quiz-info-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .quiz-info {
-  padding: 10px 20px;
-  font-size: 0.8em;
+  padding-top: 10px;
+  font-size: 1.2em;
   text-align: left;
+  color: #1a3852;
+  font-weight: 400;
 }
 
 #quiz-name {
-  margin-top: -55px;
+  margin-top: -50px;
   padding-bottom: 20px;
-  font-size: 1.7em;
+  font-size: 2.3em;
 }
 
 .info {
@@ -38,6 +37,7 @@
 
 .quiz {
   margin: 40px auto;
+  width: 60%;
 }
 
 #question-text {

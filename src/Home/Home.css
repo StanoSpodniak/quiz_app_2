@@ -1,18 +1,23 @@
 .banner {
-    margin: 20px auto;
     width: 100%;
-    background-color: #396a93;
+    background: radial-gradient(circle, rgba(100,149,237,1) 0%, rgba(255,255,255,1) 100%);
     color: white;
     text-align: center;
 }
 
+#slogan {
+    padding-top: 20px;
+    font-size: 2.3em;
+}
+
 .play-random-button {
-    height: 40px;
-    width: 175px;
+    height: 60px;
+    width: 250px;
     border-radius: 20px;
     background-color: white;
-    font-size: 1.1em;
-    padding: 5px;
+    font-size: 1.5em;
+    margin: 40px auto 20px auto;
+    color: #396a93;
 }
   
 .play-random-button:hover {
@@ -20,33 +25,26 @@
     background-color: #F0F8FF;
 }
 
-.search-container {
-    display: flex;
-    margin: 0 auto;
-    width: 60%;
-    justify-content: center;
-}
-
 .search-form {
-    display: flex;
-    width: 30%;
-    position: relative;
-    justify-content: center;
+    width: 90%;
+    margin: 20px auto;
+    padding-bottom: 20px;
+    padding-left: 20px;
 }
 
 .search-bar {
-    flex-grow: 1;
-    margin: 20px 0;
     height: 35px;
-    border: 2px solid #ADD8E6;
+    border: 2px solid white;
     color: #396a93;
     border-radius: 5px;
     font-size: 20px;
     text-align: center;
+    width: 25%;
+    margin: 0 auto;
 }
 
 .search-bar::placeholder {
-    color: #87CEEB;
+    color: #6495ED;
 }
 
 .search-bar:focus {
@@ -59,11 +57,11 @@
     position: relative;
     height: 30px;
     right: 40px;
-    top: 25px;
+    top: 10px;
 }
 
 .quiz-categories {
-    margin: 0 auto;
+    margin: 40px auto;
     width: 55%;
 }
 
