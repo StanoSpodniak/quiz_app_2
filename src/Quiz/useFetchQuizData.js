@@ -10,7 +10,7 @@ const useFetchQuizData = (quizParams) => {
 
     /*const removeCategoryTag = ["music", "film", "tv", "food", "philosophy", "politics", "psychology", "religion", "law", "words", "chess", "harry_potter", "star_wars", "star_trek", "comics",
 "pc_games", "video_games", "aviation"];*/
-    const removeCategoryID = ["407", "408", "409", "410", "701", "702", "703", "704", "705", "706", "707", "708", "709", "710", "711", "712"];
+    const removeCategoryID = ["407", "408", "409", "410", "411", "412", "701", "702", "703", "704", "705", "706", "707", "708", "709", "710", "711", "712", "713"];
 
     useEffect(() => {
         console.log(quizParams.id);

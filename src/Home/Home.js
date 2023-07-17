@@ -21,13 +21,18 @@ const Home = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-      };
+    };
+
+    const handleRandom = () => {
+        
+    }
 
     return (
         <div className="main-container">
-            <div className="header">
+            <div className="banner">
                 <h2>Online free quizzes</h2>
                 <h2>Play random quiz</h2>
+                <button className="play-random-button" onClick={handleRandom} >Play Random Quiz</button>
             </div>
             <div className="search-container">
                 <form className="search-form" onSubmit={handleSubmit} >

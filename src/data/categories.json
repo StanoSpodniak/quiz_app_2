@@ -84,7 +84,9 @@
                 {"id": 407, "name": "TV", "tag": "tv", "category": "arts"},
                 {"id": 408, "name": "Harry Potter", "tag": "harry_potter", "category": "arts"},
                 {"id": 409, "name": "Star Wars", "tag": "star_wars", "category": "arts"},
-                {"id": 410, "name": "Star Trek", "tag": "star_trek", "category": "arts"}
+                {"id": 410, "name": "Star Trek", "tag": "star_trek", "category": "arts"},
+                {"id": 411, "name": "Comics", "tag": "comics", "category": "arts"},
+                {"id": 412, "name": "Video Games", "tag": "pc_games,video_games", "category": "arts"}
             ]
         },
         {
@@ -100,7 +102,7 @@
                 {"id": 504, "name": "Psychology", "tag": "psychology", "category": "society_and_culture"},
                 {"id": 505, "name": "Law", "tag": "law", "category": "society_and_culture"},
                 {"id": 506, "name": "Religion", "tag": "religion", "category": "society_and_culture"},
-                {"id": 507, "name": "Bible & Christianity", "tag": "bible,christianity", "category": "society_and_culture"},
+                {"id": 507, "name": "Bible & Christianity", "tag": "bible,christianity,jesus", "category": "society_and_culture"},
                 {"id": 508, "name": "Islam", "tag": "islam", "category": "society_and_culture"},
                 {"id": 509, "name": "Hinduism", "tag": "hinduism", "category": "society_and_culture"},
                 {"id": 510, "name": "Judaism", "tag": "judaism", "category": "society_and_culture"},
@@ -142,7 +144,8 @@
                 {"id": 709, "name": "Australia", "tag": "australia", "category": "countries"},
                 {"id": 710, "name": "Russia", "tag": "russia", "category": "countries"},
                 {"id": 711, "name": "Mexico", "tag": "mexico", "category": "countries"},
-                {"id": 712, "name": "Canada", "tag": "canada", "category": "countries"}
+                {"id": 712, "name": "Canada", "tag": "canada", "category": "countries"},
+                {"id": 713, "name": "Japan", "tag": "japan", "category": "countries"}
             ]
         },
         {
@@ -154,11 +157,9 @@
             "quizzes": [
                 {"id": 801, "name": "General Knowledge", "tag": "general_knowledge", "category": "miscelenious"},
                 {"id": 802, "name": "Word Meanings", "tag": "words", "category": "miscelenious"},
-                {"id": 804, "name": "Cuisine", "tag": "food", "category": "miscelenious"},
-                {"id": 805, "name": "Chess", "tag": "chess", "category": "miscelenious"},
-                {"id": 809, "name": "Comics", "tag": "comics", "category": "miscelenious"},
-                {"id": 810, "name": "PC Games", "tag": "pc_games,video_games", "category": "miscelenious"},
-                {"id": 811, "name": "Aviation", "tag": "aviation", "category": "miscelenious"}
+                {"id": 803, "name": "Cuisine", "tag": "food", "category": "miscelenious"},
+                {"id": 804, "name": "Chess", "tag": "chess", "category": "miscelenious"},
+                {"id": 805, "name": "Aviation", "tag": "aviation", "category": "miscelenious"}
             ]
         }
     ]

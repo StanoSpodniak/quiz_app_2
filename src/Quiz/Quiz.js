@@ -140,18 +140,17 @@ const Quiz = () => {
         event.target.style.backgroundColor = color.neutral;
     };
 
-    const firstLetterCapitalized = (str) => {
-        const [firstLetter, ...remainingLetters] = str;
-        return `${firstLetter.toUpperCase()}${remainingLetters.join('')}`;
-    }
-
     return ( 
         <div className="quiz-container">
             <div className="quiz-header">
-                <h2 id="category-name">{firstLetterCapitalized(quizParams.quizName)}</h2>
                 <div className="quiz-info">
-                    {data && <h2>Question: {questionCount}/{data.length}</h2>}
-                    {data && <h2>Score: {score}/{data.length}</h2>}
+                    {/* Move to center quiz name */}
+                    <h2 className="info">Quiz: <span style={{fontWeight: "400"}}>{quizParams.quizName.toLowerCase()}</span></h2>
+                    <h2 className="info">Category: <span style={{fontWeight: "400"}}>{quizParams.category}</span></h2>
+                </div>
+                <div className="quiz-info">
+                    {data && <h2 className="info">Question: <span style={{fontWeight: "400"}}>{questionCount}/{data.length}</span></h2>}
+                    {data && <h2 className="info">Score: <span style={{fontWeight: "400"}}>{score}/{data.length}</span></h2>}
                 </div>
             </div>
             <div className="quiz">
