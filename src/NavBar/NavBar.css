@@ -5,6 +5,8 @@
   height: 60px;
   margin: 0 auto;
   background-color: #396a93;
+  /*background-image: url('/public/icons/background.jpg');*/
+  z-index: 1;
 }
 
 .navbar h1 {

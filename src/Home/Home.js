@@ -4,6 +4,8 @@ import categories from "../data/categories";
 import SearchResult from './SearchResult';
 import "./Home.css";
 
+//the quiz will be not selected through url but through quiz data saved in local storage
+
 const Home = () => {
     const navigate = useNavigate();
     const quizCategories = {categories};
